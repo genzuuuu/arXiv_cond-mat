@@ -17,7 +17,7 @@ def main(api_key:str,
         with open(day.strftime("data/%Y-%m-%d_origin.md"),'a') as f:
             f.write(content)
         messages = [
-                    {"role": "system", "content": f"用户将发送{update_date.strftime('%Y年%m月%d日')}arXiv有关凝聚态物理的论文，请用中文总结今天凝聚态相关文章，包括新的理论、计算和实验的进展，带上文章链接"},
+                    {"role": "system", "content": f"用户将发送{update_date.strftime('%Y年%m月%d日')}arXiv有关凝聚态物理的论文，请用英文总结今天凝聚态相关文章，包括新的理论、计算和实验的进展，带上文章链接"},
                     {"role": "user", "content": content},
                    ]
         if os.path.exists("README.md"):
@@ -50,3 +50,4 @@ if __name__ == "__main__":
     main(api_key=args.api_key,
          base_url=args.base_url,
          model=args.model)
+
