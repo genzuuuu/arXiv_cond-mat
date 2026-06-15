@@ -56,8 +56,8 @@ def main(api_key:str,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--api_key', required=False, default=os.environ.get("API_KEY", ""))
-    parser.add_argument('--base_url', required=False, default=os.environ.get("BASE_URL", "https://models.github.ai/inference"))
-    parser.add_argument('--model', required=False, default=os.environ.get("MODEL", "deepseek/DeepSeek-V3-0324"))
+    parser.add_argument('--base_url', required=False, default=os.environ.get("BASE_URL", "https://api.deepseek.com"))
+    parser.add_argument('--model', required=False, default=os.environ.get("MODEL", "deepseek-v4-flash"))
     args = parser.parse_args()
     main(api_key=args.api_key,
          base_url=args.base_url,
