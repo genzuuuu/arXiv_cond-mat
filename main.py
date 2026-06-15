@@ -1,13 +1,22 @@
 import datetime, argparse, feedparser, time, os
 from openai import OpenAI
 
+def get_feed_update_date(feed):
+    for key in ("published_parsed", "updated_parsed"):
+        parsed = feed.feed.get(key)
+        if parsed:
+            return datetime.datetime.fromtimestamp(time.mktime(parsed))
+    raise ValueError("Could not determine arXiv feed update date")
+
 def main(api_key:str,
          base_url:str,
          model:str):
     day = datetime.datetime.now()
     url = "https://rss.arxiv.org/rss/cond-mat"
     feed = feedparser.parse(url)
-    update_date = datetime.datetime.fromtimestamp(time.mktime(feed.feed['published_parsed']))
+    if not feed.entries:
+        raise ValueError(f"Failed to fetch arXiv feed from {url}")
+    update_date = get_feed_update_date(feed)
     if update_date.date() == day.date():
         content = ""
         for i,entry in enumerate(feed.entries):
@@ -23,17 +32,20 @@ def main(api_key:str,
         if os.path.exists("README.md"):
             os.remove("README.md")
         filestart = f"### 自动更新arXiv凝聚态物理的文章\n  - **代码更新时间** {day.isoformat()}\n  - **arXiv更新时间** {update_date.isoformat()}\n  - **demo页面** [arXiv凝聚态物理每日导读](https://iopwsy.github.io/arXiv_cond-mat/)\n  - **源代码** [arXiv凝聚态物理每日导读代码](https://github.com/iopwsy/arXiv_cond-mat/)\n  - **更多体验**: [MatElab平台](https://in.iphy.ac.cn/eln/#/recday)\n"
-        try:
-            client = OpenAI(api_key=api_key,
-                            base_url=base_url)
-            response = client.chat.completions.create(
-                                                      model=model,
-                                                      messages=messages,
-                                                      stream=False,
-                                                      )
-            content = f"{filestart}\n{response.choices[0].message.content}"
-        except:
-            content = f"{filestart}\n### LLM运行出错，以下是arXiv原文\n\n{content}"
+        if api_key:
+            try:
+                client = OpenAI(api_key=api_key,
+                                base_url=base_url)
+                response = client.chat.completions.create(
+                                                          model=model,
+                                                          messages=messages,
+                                                          stream=False,
+                                                          )
+                content = f"{filestart}\n{response.choices[0].message.content}"
+            except Exception:
+                content = f"{filestart}\n### LLM运行出错，以下是arXiv原文\n\n{content}"
+        else:
+            content = f"{filestart}\n### 未配置 API key，以下是arXiv原文\n\n{content}"
         if not os.path.exists("data"):
             os.mkdir("data")
         with open(day.strftime("data/%Y-%m-%d.md"),'a') as f:
@@ -43,9 +55,9 @@ def main(api_key:str,
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--api_key', required=True)
-    parser.add_argument('--base_url', required=False,default="https://models.github.ai/inference")
-    parser.add_argument('--model', required=False,default="deepseek/DeepSeek-V3-0324")    
+    parser.add_argument('--api_key', required=False, default=os.environ.get("API_KEY", ""))
+    parser.add_argument('--base_url', required=False, default=os.environ.get("BASE_URL", "https://models.github.ai/inference"))
+    parser.add_argument('--model', required=False, default=os.environ.get("MODEL", "deepseek/DeepSeek-V3-0324"))
     args = parser.parse_args()
     main(api_key=args.api_key,
          base_url=args.base_url,
