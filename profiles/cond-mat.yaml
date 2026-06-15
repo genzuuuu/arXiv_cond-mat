@@ -1,0 +1,17 @@
+id: cond-mat
+name_en: Daily arXiv Condensed Matter Digest
+name_zh: arXiv 凝聚态物理每日导读
+feed_urls:
+  - https://rss.arxiv.org/rss/cond-mat
+data_dir: data
+readme_path: README.md
+demo_url: https://genzuuuu.github.io/arXiv_cond-mat/
+repo_url: https://github.com/genzuuuu/arXiv_cond-mat/
+email_subject: "arXiv cond-mat Daily Digest | 凝聚态每日导读"
+system_prompt_en: >
+  The user will send today's arXiv condensed matter physics papers.
+  Summarize the key theoretical, computational, and experimental advances in English.
+  Group by topic, include paper links, and keep the tone concise and readable.
+system_prompt_zh: >
+  用户将发送今天 arXiv 凝聚态物理相关论文。请用中文总结今日重要进展，
+  涵盖新的理论、计算和实验工作。按主题分组，保留文章链接，语言简洁易读。

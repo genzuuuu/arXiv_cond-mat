@@ -33,6 +33,7 @@ def send_digest_email(
     from_addr = os.environ.get("SMTP_FROM", user)
 
     meta_html = (
+        f"<p><b>{meta.get('title', 'arXiv Daily Digest')}</b></p>"
         f"<p><b>arXiv update:</b> {meta['arxiv_update']}</p>"
         f"<p><b>Generated:</b> {meta['generated_at']}</p>"
         f"<p><a href=\"{meta['demo_url']}\">View on GitHub Pages</a> · "
@@ -54,7 +55,7 @@ def send_digest_email(
 </html>"""
 
     text_body = (
-        f"arXiv cond-mat Daily Digest\n"
+        f"{meta.get('title', 'arXiv Daily Digest')}\n"
         f"arXiv update: {meta['arxiv_update']}\n"
         f"Generated: {meta['generated_at']}\n\n"
         f"=== English Summary ===\n\n{summary_en}\n\n"

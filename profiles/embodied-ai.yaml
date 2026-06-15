@@ -1,0 +1,23 @@
+id: embodied-ai
+name_en: Daily arXiv Embodied AI & Dexterous Manipulation Digest
+name_zh: arXiv 具身智能与灵巧操作每日导读
+feed_urls:
+  - https://rss.arxiv.org/rss/cs.RO
+  - https://rss.arxiv.org/rss/cs.AI
+data_dir: embodied-ai/data
+readme_path: embodied-ai/README.md
+demo_url: https://genzuuuu.github.io/arXiv_cond-mat/embodied-ai/
+repo_url: https://github.com/genzuuuu/arXiv_cond-mat/
+email_subject: "arXiv Embodied AI Daily Digest | 具身智能每日导读"
+system_prompt_en: >
+  The user will send today's arXiv papers from robotics and AI feeds.
+  Focus on embodied intelligence, dexterous manipulation, robotic hands,
+  multi-finger grasping, in-hand manipulation, tactile sensing, visuomotor
+  policies, teleoperation, and sim-to-real for manipulation. Skip or briefly
+  note papers outside these themes. Summarize in English, group by topic,
+  include paper links, and keep the tone concise and readable.
+system_prompt_zh: >
+  用户将发送今日 arXiv 机器人学与人工智能相关论文。请重点关注具身智能、
+  灵巧手、灵巧操作、多指抓取、手中操作、触觉感知、视觉-运动策略、遥操作、
+  以及操作任务的 sim-to-real 等方向；非相关论文可略过或一笔带过。请用中文
+  按主题分组总结，保留文章链接，语言简洁易读。
