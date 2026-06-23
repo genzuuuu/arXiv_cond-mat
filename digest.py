@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 import time
 from dataclasses import dataclass
 
@@ -10,6 +11,13 @@ from openai import OpenAI
 from email_sender import send_digest_email, smtp_configured
 
 PROFILES_DIR = os.path.join(os.path.dirname(__file__), "profiles")
+
+LINK_CITATION_RULES = """
+Citation rules (mandatory):
+- Every paper must include a clickable markdown link copied from the input URL field.
+- Use exactly: [Paper Title](https://arxiv.org/abs/XXXX.XXXXX)
+- Do NOT use bare indices like [12], **[12]**, (12), or [Title (12)] without the arXiv URL.
+""".strip()
 
 
 @dataclass
@@ -69,15 +77,78 @@ def fetch_merged_feed(feed_urls: list[str]):
     return entries, update_date
 
 
+def build_paper_index(entries):
+    return {
+        i + 1: {"title": entry["title"].strip(), "link": entry["link"].strip()}
+        for i, entry in enumerate(entries)
+    }
+
+
+def inject_paper_links(summary: str, entries) -> str:
+    index = build_paper_index(entries)
+    if not index:
+        return summary
+
+    def linked_citation(number: int, title: str | None = None) -> str | None:
+        paper = index.get(number)
+        if not paper:
+            return None
+        label = title or paper["title"]
+        return f"[{label}]({paper['link']})"
+
+    def replace_title_with_number(match):
+        title = match.group(1).strip()
+        number = int(match.group(2))
+        citation = linked_citation(number, title)
+        return citation if citation else match.group(0)
+
+    def replace_bold_number(match):
+        number = int(match.group(1))
+        citation = linked_citation(number)
+        return f"**{citation}**" if citation else match.group(0)
+
+    def replace_bare_number(match):
+        number = int(match.group(1))
+        citation = linked_citation(number)
+        return citation if citation else match.group(0)
+
+    def replace_bold_title_with_number(match):
+        citation = linked_citation(int(match.group(2)), match.group(1).strip())
+        return f"**{citation}**" if citation else match.group(0)
+
+    # **[Title (290)]** or **[Title(290)]**
+    summary = re.sub(
+        r"\*\*\[([^\]]+?)\s*\((\d+)\)\]\*\*",
+        replace_bold_title_with_number,
+        summary,
+    )
+    # [Title (290)] without bold
+    summary = re.sub(
+        r"(?<!\()\[([^\]]+?)\s*\((\d+)\)\](?!\()",
+        replace_title_with_number,
+        summary,
+    )
+    # **[290]**
+    summary = re.sub(r"\*\*\[(\d+)\]\*\*", replace_bold_number, summary)
+    # bare [12] not already part of a markdown link
+    summary = re.sub(r"\[(\d+)\](?!\()", replace_bare_number, summary)
+
+    return summary
+
+
 def build_paper_content(entries):
     content = ""
     for i, entry in enumerate(entries):
         title = entry["title"]
         abstract = entry["summary"].split("Abstract: ")[-1]
         author = entry.get("author", "")
+        link = entry["link"]
         content += (
-            f"[{i + 1}]. [*{title}*]({entry['link']} \"{title}\")\n"
-            f"{author}\n{abstract}\n\n"
+            f"### Paper [{i + 1}]\n"
+            f"Title: {title}\n"
+            f"URL: {link}\n"
+            f"Authors: {author}\n"
+            f"Abstract: {abstract}\n\n"
         )
     return content
 
@@ -101,10 +172,11 @@ def build_file_header(profile: DigestProfile, day, update_date, lang):
 
 
 def summarize(client, papers, model, system_prompt):
+    full_prompt = f"{system_prompt.strip()}\n\n{LINK_CITATION_RULES}"
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": full_prompt},
             {"role": "user", "content": papers},
         ],
         stream=False,
@@ -164,6 +236,9 @@ def run_digest(profile_id: str, api_key: str, base_url: str, model: str, send_em
     summary_zh = generate_summary(
         api_key, base_url, model, papers, profile.system_prompt_zh, "zh"
     )
+
+    summary_en = inject_paper_links(summary_en, entries)
+    summary_zh = inject_paper_links(summary_zh, entries)
 
     header_en = build_file_header(profile, day, update_date, "en")
     header_zh = build_file_header(profile, day, update_date, "zh")
