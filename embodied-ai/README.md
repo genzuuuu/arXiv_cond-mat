@@ -1,109 +1,161 @@
 ### Daily arXiv Embodied AI & Dexterous Manipulation Digest
-  - **Generated at** 2026-11-02T13:50:06.824955
-  - **arXiv update** 2026-11-02T05:00:00
+  - **Generated at** 2026-11-03T12:59:46.933170
+  - **arXiv update** 2026-11-03T05:00:00
   - **Demo** [Daily arXiv Embodied AI & Dexterous Manipulation Digest](https://genzuuuu.github.io/arXiv_cond-mat/embodied-ai/)
   - **Source** [GitHub repo](https://github.com/genzuuuu/arXiv_cond-mat/)
 
-# arXiv Robotics & AI Digest — Embodied Intelligence Focus
+# Embodied Intelligence & Robot Manipulation — arXiv Digest
 
-## World Models & Video-to-Action
+**Scope note:** This batch contains ~1000 papers, overwhelmingly outside robotics (LLM agents, NLP, medical imaging, ML theory). Below I cover the work that falls within embodied intelligence, manipulation, tactile sensing, VLA policies, teleoperation, sim-to-real, humanoids, and robot cognition. Non-robotics papers are omitted.
 
-**[WorldBridge: Bridging Video and Action for Task Generalization in World Action Models](https://arxiv.org/abs/2610.40748)** — Separates video and action experts in a World Action Model; in-distribution supervision alone yields 25% OOD success, unlabeled task video raises it to 55.9%, one labeled demo per task to 70.7%. SOTA on RoboTwin 2.0 (96.23%), RoboCasa GR1.
+---
 
-**[CausalWAM: Learning the Causes of Actions in World Action Models](https://arxiv.org/abs/2610.42096)** — Adds a sparse routing path to a pretrained WAM's action head so action latents isolate causal factors from nuisance variables, with identifiability proof; improves closed-loop success on synthetic and real robots.
+## 1. Tactile Sensing & Contact-Rich Manipulation
 
-**[Hierarchical World Models with Implicit Dynamics](https://arxiv.org/abs/2610.42146)** — Decouples high-level state-space reachability from low-level inverse dynamics; 38.5% gain over SOTA planners and 135% over single-level world-model MPC on long-horizon tasks.
+- **[TacMind](https://arxiv.org/abs/2611.00455)** — 128-task tactile benchmark (Precise/Recognition/Dynamic) plus an action-conditioned latent tactile world model with predictive tactile reflection.
+- **[Evaluating Tactile Foundation Models for End-to-End Imitation Learning](https://arxiv.org/abs/2611.00957)** — Integrates multiple TFMs into Diffusion Policy; 5,000+ real rollouts. Useful empirical guide on when tactile pretraining helps.
+- **[$TF^2$-Steering](https://arxiv.org/abs/2611.01483)** — Refines flow-matching action expert via tactile forecasts + real-time feedback (MoE). +10.7 pts sim, +9.1 pts real over strongest baselines.
+- **[PanoTac](https://arxiv.org/abs/2611.03520)** — Low-cost ($<50) dense 3-axis (normal + shear) 12×32 tactile fingertip at 60 Hz; +46.7 pts over vision-only on scooping/pouring/tube tasks.
+- **[Visuo-tactile Diffusion Policy with Auxiliary Tactile Dynamics Prediction](https://arxiv.org/abs/2611.02677)** — Predicts future fingertip images as an auxiliary training objective; +16.3 pts over vision-only in MuJoCo assembly.
+- **[MagPillar](https://arxiv.org/abs/2611.01609)** — Magnetic pillar-array tactile sensor with 3-axis Hall sensing; 99.3% material classification.
+- **[Exploring Proximity and Tactile Sensing for Robotic Manipulation](https://arxiv.org/abs/2611.03489)** — ToFTouch: multizone ToF + pressure array for pre-grasp adjustment, clutter extraction, tight insertion.
+- **[ForceLDM](https://arxiv.org/abs/2611.03294)** — Force-aware latent dynamics model; distills privileged future force/torque + optical flow into a student, five real contact-rich tasks.
+- **[History-Aware Force Sensing in a Pneumatic Kresling Origami Cell](https://arxiv.org/abs/2611.02140)** — GRU-based force estimation from angular history in a soft origami cell; tunable stiffness.
+- **[Tactile MNIST](https://arxiv.org/abs/2506.06361)** — Benchmark suite for active tactile perception; 153.6K real tactile samples from 600 3D-printed digits.
 
-**[When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity](https://arxiv.org/abs/2610.41970)** — Sobering audit: learned value selectors underperform random by 1.66 pp on Cosmos Policy/RoboCasa, oracle headroom is 1.4 pp, and 82% of states have identical candidate outcomes. Also flags a silent rendering corruption on compute-heavy planning paths.
+## 2. Dexterous Hands, In-Hand Manipulation & Multi-Finger Grasping
 
-**[PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations](https://arxiv.org/abs/2610.37381)** — Lightweight module extracts physical tokens via future RGB/depth/flow prediction (no online video generation); 99.3% LIBERO, 93.6% RoboTwin 2.0, 81.5% SimplerEnv.
+- **[GoalDex](https://arxiv.org/abs/2611.02171)** — End-to-end visuomotor in-hand reorientation from RGB + proprioception, no pose estimation; image-goal conditioning; single-policy sim-to-real across 5 objects.
+- **[DexArena](https://arxiv.org/abs/2611.02629)** — 10 long-horizon + 30 stage-level bimanual dexterous tasks with verified teleop demos and stage-grounded success conditions.
+- **[Tactus](https://arxiv.org/abs/2610.39076)** — Textile sensing glove: 1.5 mm fingertip stack, capacitive tactile + IMU-fused pose through hand-object occlusion; 0.59 N detection, 11 mm fingertip error. Notable for naturalistic dexterous data collection.
+- **[Any-ttach](https://arxiv.org/abs/2605.30569)** — Argues dexterity is partly a *tool-use* problem: standardized self-locking interface for autonomous end-effector swapping; 15 heterogeneous modules, multi-tool long-horizon tasks.
+- **[OmniPiano](https://arxiv.org/abs/2611.00243)** — 1–5 Shadow Hands piano benchmark; 912 task settings, 36 RL baselines, standard/robust/safe/multi-agent regimes.
+- **[HuG](https://arxiv.org/abs/2611.01659)** — Humanoid whole-body affordance grasping with active perception; controller-in-the-loop data curation rejects 73% of kinematically valid but destabilizing grasps; 87.5% real success, zero real demos.
+- **[Pose accuracy is not grasp reliability](https://arxiv.org/abs/2609.13235)** — Key finding: a pose passing ADD(-S) still yields 0.79 grasp success vs 0.86 with annotated pose; residual pose posteriors recover much of the gap.
+- **[Harnessing Plastic Deformation for Continuous Passive Stability in Soft Grippers](https://arxiv.org/abs/2607.15659)** — Kirigami metal-elastomer hybrid; 16 N passive holding without continuous energy.
+- **[SomaAlign](https://arxiv.org/abs/2611.02794)** — 100-object, 74.9K-sample multimodal soft-grasping dataset with reliability-aware contrastive alignment; 84% early grasp-success prediction.
 
-**[Seeing and Imagining as One: Unified Video Generation and 4D Perception for Embodied World Modeling](https://arxiv.org/abs/2610.39232)** — Single DiT jointly models video, depth, segmentation, and flow across robot embodiments and human hands.
+## 3. Vision-Language-Action (VLA) Policies
 
-## VLA Policies & Inference Efficiency
+- **[Behavioral Steering of VLA Models in the Low-Parameter Regime](https://arxiv.org/abs/2611.00522)** — Freezes OpenVLA-OFT 7B; 8–384 trainable params via GRPO or CMA-ES steers execution style (carry height +120 mm at 92% success). Clean, practical result.
+- **[WorldSketch](https://arxiv.org/abs/2611.00513)** — VLM builds a minimal kinematic world model rather than emitting actions; geometric planner optimizes over it. 91% RoboCasa zero-shot, 10× fewer VLM tokens.
+- **[JADE](https://arxiv.org/abs/2611.01215)** — VLM and action expert *jointly* denoise actions; VLM reads noisy action latents at every step. SOTA among π0.5-based methods on RoboDojo.
+- **[PREM](https://arxiv.org/abs/2611.00634)** — Prediction-regulated visual memory for VLA policies; huge gain on RMBench M(1) (14.4% → 83.8%), 7.7 ms overhead.
+- **[MOST](https://arxiv.org/abs/2611.00734)** — Policy-internal memory supervised by object states + subtask progress; real-world success 6.7% → 43.3%. Introduces RoboCasa-Long.
+- **[HeLM](https://arxiv.org/abs/2611.02660)** — Hierarchical explicit *language* memory for non-Markovian manipulation; +12.8 pts intra-episode, 4.5× less memory.
+- **[2AM](https://arxiv.org/abs/2609.11308)** — Agent holds all task memory; a stateless RGB action model executes. 76.3% on LIBERO-Mem (+61.5 pts over prior best).
+- **[Leap-VLA](https://arxiv.org/abs/2611.01011)** — Low-rate VLM semantic anchor + high-rate flow-matching expert with age-conditioned cache reuse; 95.5% LIBERO-Spatial at 2 s refresh.
+- **[CalVLA](https://arxiv.org/abs/2611.00394)** — Shapes native action-token confidence with outcome supervision for failure discrimination (AUROC 0.74). Honest about inconclusive comparison to linear probes.
+- **[Spotter](https://arxiv.org/abs/2609.36808)** — Reverses roles: embodied model leads, VLM runs in parallel and intervenes only on detected failure. π0.5 53% → 83% on a real robot; ~70% cheaper than VLM-led baselines.
+- **[Vision-Language Models Are Joint Denoisers](https://arxiv.org/abs/2611.01215)** — see JADE above.
+- **[Training task-relevant VLA capability reports:** [FineCraft](https://arxiv.org/abs/2611.03163) (MetaFine, 4th, 0.878), [Task-Specialized LC Models](https://arxiv.org/abs/2611.00955) (3rd, 0.914), [Learning from an Imitable Teacher](https://arxiv.org/abs/2611.00615) (2nd, 0.947 — strong lessons on teacher data quality).
+- **[Auriga](https://arxiv.org/abs/2611.01112)** — Task-agnostic agent harness over a VLM planner; closes 68.3% of the planning-execution gap on RoboDojo; 1st on leaderboard (57.7%).
+- **[MAESTRO](https://arxiv.org/abs/2511.00917)** — VLM coding agent orchestrating a curated perception/planning/control tool library; matches VLA baselines zero-shot.
+- **[Democratizing Robot-Use Agents](https://arxiv.org/abs/2611.01560)** — Open harness + open-weight model beats a published proprietary RUA result; identifies four general capabilities.
 
-**[STAR: Steering Action Representations during Inference](https://arxiv.org/abs/2610.41009)** — Training-free: finds late-layer action representations lose visual grounding; EMA over late residual updates yields +4.0 pp success.
+## 4. Sim-to-Real, Real-to-Sim & World Models for Control
 
-**[RTPolicy: Real-Time (32.9 Hz) Multi-View Visuomotor Policy for Robotic Manipulation on Edge Devices](https://arxiv.org/abs/2610.41625)** — View-aware fusion + compressed tokens condition a flow-matching head; 52.26% RoboTwin 2.0 (above π₀), 72% real bimanual at 30 ms on RDK S600.
+- **[Closing the Dynamics Gap through Self-Directed Robotic Interaction (CUE)](https://arxiv.org/abs/2611.02691)** — Agent builds its own perception, identifies friction/restitution, targets interactions where sim is least accurate. 72% error reduction on billiards; deployed on a real pool table.
+- **[CoEnv / CoEx](https://arxiv.org/abs/2604.05484)** — Real-to-sim digital twin of the deployment workspace; code agent practices multi-arm programs in the twin, then transfers. 70% vs 50% success.
+- **[RoboSnap](https://arxiv.org/abs/2607.06699)** — One RGB image → simulation-ready scene (collision-aware foreground + 3DGS background). Includes DROID-Sim (564 scenes).
+- **[A Reproducible Reconstruction Framework for Lunar Analog Scenes](https://arxiv.org/abs/2611.00870)** — 3DGS benchmarking; finds training metrics are poor predictors of cross-reconstruction fidelity. Relevant to sim asset pipelines.
+- **[KlaskTron](https://arxiv.org/abs/2611.03138) + [KlaskTron-IL](https://arxiv.org/abs/2611.03091)** — Open-source (<$2500) adversarial MARL testbed with learned actuator model enabling zero-shot sim-to-real; IL benchmark exposing BC/GAIL failure modes under contact-rich adversarial dynamics.
+- **[World Models Need Not Be Right to Rank Policies Right](https://arxiv.org/abs/2611.01139)** — Small open-access message: model ranking fidelity, audit covariance, and model exploitation are distinct. Rank correlations high (τ 0.96/0.80) but audit-error correlation near zero.
+- **[Why Koopman Structure Does Not Help Differentiable World Models for Humanoid Tracking](https://arxiv.org/abs/2611.00951)** — Negative result with a clear mechanistic explanation (action-affine tangent argument). Worth reading before adding structure.
+- **[Roz: A Taste Test for World Model Latents](https://arxiv.org/abs/2611.00612)** — Argues SOTA latent world models capture image similarity but not mass/friction/deformation; proposes 1,734-scenario probe suite.
+- **[pico-WAM](https://arxiv.org/abs/2611.01039)** — Counterfactual branch training + simulator-cost scoring improve Push-T coverage; scoring is the better improvement target than proposal generation.
+- **[W2A](https://arxiv.org/abs/2611.02600)** — Distills video-diffusion denoising representations into an action model; discards video model at test time. 95.9% LIBERO, ~21× faster.
+- **[MoGAP](https://arxiv.org/abs/2610.36624)** — Motion-guided asymmetric noise for WAMs; GR-1 tabletop 38.8% → 47.5%.
+- **[DARE (Disturbance-Aware RETrieval)](https://arxiv.org/abs/2611.02073)** — Relational dynamics with retrospective correction for retrieving objects from dense clutter.
+- **[ReWorld](https://arxiv.org/abs/2601.12428)** — RL alignment of embodied video generators against a multi-dimensional reward (physical fidelity, task logic, embodiment, visual quality).
 
-**[Direct Action-Manifold Modeling for Efficient and Robust Bimanual Manipulation](https://arxiv.org/abs/2610.41643)** — DMAT reformulates action generation as single-step modeling of clean action chunks; +129.1%/+95.7% relative success over IDP3 and DiTFlow3D on 567 trials, 1.3–2× faster.
+## 5. Humanoids & Whole-Body Control
 
-**[$\pi$-StepNFT: Wider Space Needs Finer Steps in Online RL for Flow-based VLAs](https://arxiv.org/abs/2603.02083)** — Flow-native online RL treating SDE transitions as supervision units; 57.6%→92.0% (π₀) and 77.1%→94.0% (π₀.₅) on LIBERO.
+- **[Anchor 1](https://arxiv.org/abs/2611.00193)** — Whole-body controller with calibrated sparse motion references and decoupled error feedback; 30–80% lower tracking error than existing controllers. Paired benchmark included.
+- **[OpenHLM](https://arxiv.org/abs/2606.22174)** — Open recipe for whole-body humanoid VLA; joint-based teleop beats partial-DoF interfaces; VLA pretrained on wheeled/static platforms transfers surprisingly well.
+- **[ReContact](https://arxiv.org/abs/2611.02968)** — Retargets human contact plans (not just object trajectories) from video; regrasp success 0.16% → 83.5% over best baseline; 7 tasks on Unitree G1.
+- **[ROOF](https://arxiv.org/abs/2610.42097)** — Fall recovery under overhead constraints; 95/150 real attempts across 7 scenes including unseen furniture.
+- **[CompliantBot](https://arxiv.org/abs/2611.01748)** — Whole-body compliance without task-specific interaction interfaces; yields farther, lowest joint mechanical power.
+- **[MAPO](https://arxiv.org/abs/2611.02613)** — Identifies MoE divergence misestimation in PPO; alternating router/expert optimization tracks 182 motions vs 1 for PPO-MoE.
+- **[Leap-VLA](https://arxiv.org/abs/2611.01011)**, **[ROOF](https://arxiv.org/abs/2610.42097)** — see above (humanoid deployment).
+- **[MAPO](https://arxiv.org/abs/2611.02613)** — see above.
+- **[Human-Oriented World Model](https://arxiv.org/abs/2611.02690)** — Position paper on task-relevant human state estimation + personalized dynamics prediction for assistive agents.
+- **[HumiMimic](https://arxiv.org/abs/2610.36615)** — Transfers in-the-wild human-human interaction video to human-humanoid interaction; ~500K frames for two humanoids.
+- **[Learning Agile Humanoid Dodgeball with Onboard Monocular Vision](https://arxiv.org/abs/2611.01197)** — Estimator-in-the-loop curriculum; >85% real single-throw success on G1.
+- **[AnchorHEC](https://arxiv.org/abs/2611.02884) / [SyncHeC](https://arxiv.org/abs/2611.02999)** — Targetless hand-eye calibration (wrist + fixed cameras); SyncHeC also recovers image/joint-state time offset, worth +8.1 pts policy success.
 
-**[VLA Policies Do Not Know When Not to Act: Unintended Task Execution and Start Suppression](https://arxiv.org/abs/2610.41609)** — All six checkpoints move even on empty instructions; prompt prefixes fail entirely, action-chunk gating works on 5/6, fine-tuning suppresses completion but not motion.
+## 6. Teleoperation, Data Collection & Imitation Learning
 
-**[SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models](https://arxiv.org/abs/2610.41408)** — 1.5-bit weights on GR00T N1.7 with 93.85% LIBERO, 4.83× memory reduction, 1.51× faster with INT8 activations.
+- **[Pixel / Pixel-UMI](https://arxiv.org/abs/2611.03648)** — Co-designed full-stack mobile manipulator: low-cost wheeled humanoid, human-aligned kinematics, robot-free data collection, unified whole-body controller. **[Pixel-UMI](https://arxiv.org/abs/2611.03647)** adds environment-aware retargeting + retargeting-error-aware masking; 87% average task progress across 5 task families.
+- **[Tactus](https://arxiv.org/abs/2610.39076)** — see §2; strong option for collecting contact-aware dexterous demonstrations.
+- **[Rollout then Recycle](https://arxiv.org/abs/2611.03168)** — Public dataset: 3,718 SO-101 episodes, 7 policies × 12 tasks, 73% failures. Useful for failure analysis.
+- **[Does Validation Loss Predict Real-Robot Success?](https://arxiv.org/abs/2611.00283)** — Important negative result: held-out action error is a poor checkpoint selector; across policies the ranking *inverts*. Recommends reporting initiation failures separately.
+- **[Beyond Validation Loss: Coverage and Reliability Dynamics in Robot Policy Pretraining](https://arxiv.org/abs/2611.01565)** — large-k pass@k reveals coverage/reliability tradeoff invisible to pass@1; proposes offline checkpoint selection + generative data augmentation.
+- **[When Robots Outweigh Objects: How Inertia Mismatch Shapes Robot Policy Learning](https://arxiv.org/abs/2611.03535)** — BC is less reliable when the arm is much heavier than the object; lower-inertia workspaces/demonstrations help. Practical and underexplored.
+- **[Faster Imitation by Re-timing Demonstrations Within the Controller Limit](https://arxiv.org/abs/2611.00539)** — Diagnoses speed-up collapse as a mechanical command-merge limit; a one-parameter merge rule beats uniform re-timing.
+- **[Teach, Abstract, Apply](https://arxiv.org/abs/2611.00297)** — Dialogue-driven skill teaching for cobots; abstraction improves success and lowers interaction cost.
+- **[GazeVLA](https://arxiv.org/abs/2604.22615)** — Uses human gaze as a mid-level intention representation for cross-embodiment transfer.
+- **[BEACON](https://arxiv.org/abs/2605.08571)** — Theory-guided cross-domain co-training (best-effort adaptation) for sim-to-sim/sim-to-real with limited target demos.
+- **[ScheduleGen](https://arxiv.org/abs/2610.39429)** — Planning+scheduling for safe multi-arm demonstration generation; 79.6% data-gen success, zero-shot sim-to-real to 8 real variants.
+- **[RynnVLA-Latent](https://arxiv.org/abs/2610.34356)** — 3D-grounded latent actions from 30.1K hours of heterogeneous video; 98.8% LIBERO, 88.6% RoboTwin 2.0.
+- **[HALO-LP](https://arxiv.org/abs/2611.01038)** — New LP solver with warm-starting; demonstrated on centroidal walking/trotting SLP. Relevant if you solve QPs/contact problems.
 
-**[TinyAstral: Transferring Self-Evolving Harnesses to Tiny Generalist Manipulation Agents](https://arxiv.org/abs/2610.41216)** — Harness evolution lifts teacher 33.4%→63.6% on RoboTwin; distilled 4B student reaches 62.8% at ~⅕ teacher compute, transferable to other frozen planners.
+## 7. Safety, Verification & Reliability for Embodied Agents
 
-**[ResMerge: Residual Policy Learning and Merging for Continual Adaptation of Pre-trained Robot Policies](https://arxiv.org/abs/2610.41663)** — Residual RL (no new demos) plus residual-field consistency merging for continual adaptation; validated on LIBERO and a real Franka.
+- **[When Delay Meets Drift](https://arxiv.org/abs/2611.02101)** — Strong result: 400 ms inference delay raises safety violations by 3.5 pts under training viewpoint but **37 pts** under a 60° camera shift — 33.5 pts more than the sum of parts. Cross-layer variation propagation.
+- **[VLALagBench](https://arxiv.org/abs/2611.03103)** — 100 ms latency nearly halves success on moving targets; async execution recovers some at higher request rate; predictive model to 5.7–7.8% RMSE.
+- **[Safe-Ballbot](https://arxiv.org/abs/2611.03307)** — Tilt-consistent MPC + CBFs with conformal obstacle inflation; 9–12 ms planning.
+- **[Route-Guided CBF-QP Repair](https://arxiv.org/abs/2611.01713)** — Post-hoc CBF-QP repair that keeps the VLA's task direction (entry-exit-rejoin guidance) rather than only projecting to safety.
+- **[Guarded Compression of Adam State](https://arxiv.org/abs/2611.00589)** / **[State-Aware Activation Recomputation](https://arxiv.org/abs/2611.00590)** — Systems papers; relevant if you train large policies on limited hardware.
+- **[Reflex](https://arxiv.org/abs/2611.00524)** — Serving layer caching complete action chunks with two-level correction; 1.4–11× latency, 2.0–2.2× throughput. Directly applicable to real-time VLA deployment.
+- **[Ripple](https://arxiv.org/abs/2611.01067)** — CPU-GPU co-scheduling on unified-memory edge devices for LLM/VLM inference alongside control deadlines.
+- **[SafeLIBERO / AEGIS](https://arxiv.org/abs/2611.01713)** — see Route-Guided above.
+- **[PointPilot](https://arxiv.org/abs/2611.02930)**, **[SCOUT](https://arxiv.org/abs/2611.01600)**, **[TAMPAgent](https://arxiv.org/abs/2611.03584)** — Object-centric 3D point-flow policies; occlusion-aware planning with MCTS; belief-space agentic TAMP. All relevant to manipulation under partial observability.
 
-**[Nexus-VLA: Bridging Human and Robot Experiences via a Shared Hierarchical Semantic Latent Space](https://arxiv.org/abs/2610.42021)** — End-to-end joint human-robot training via hierarchical semantic alignment; 80.5% RoboCasa-GR1.
+## 8. Robot Learning Infrastructure, Benchmarks & Evaluation
 
-**[META-Robot: Self-Cognition and Capability Scaling in Agentic Robots](https://arxiv.org/abs/2610.41868)** / **[RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory](https://arxiv.org/abs/2610.42141)** / **[REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control](https://arxiv.org/abs/2610.42053)** — Agent-harness papers: action-level predicates for self-assessment; harness search lifts success 9.7%→43.3% on unseen scenes; hierarchical brain/router/reflex runtime scores 95.9% LIBERO-Pro with 25% fewer control steps.
+- **[RoboColosseum](https://arxiv.org/abs/2611.02497)** — Distributed in-the-wild evaluation: 5,699 pairwise comparisons, 124 sites, 4 embodiments. Key findings: frontier agents rival VLAs; rankings agree weakly across embodiments (Kendall W = 0.24); Open Track poorly predicts post-fine-tune ranking.
+- **[VerifierBench](https://arxiv.org/abs/2610.28679)** — Agents writing executable verifiers; strong on rejecting invalid, weak on accepting all valid solutions. Directly relevant to RL reward design.
+- **[LLM4Robot-Bench](https://arxiv.org/abs/2610.34527)** — Matched sim-real, 3-tier contact difficulty. GPT-6 Astra: 80% / 47.6% / 0% (L1/L2/L3) real. Clean capability-boundary evidence.
+- **[Labference](https://arxiv.org/abs/2610.35252)** — Robotic lab benchmark separating operation selection, physical execution, and outcome-dependent adaptation.
+- **[S1CogBench](https://arxiv.org/abs/2611.00911)** — System-1 decision models on 24 cognitive tasks; well-formed decisions do not imply evidence use.
+- **[TriPhysBench](https://arxiv.org/abs/2611.01934)** — Physical intelligence benchmark; best VLM at 50.4%. Companion TriPhys policy improves +17.7% relative.
+- **[Measuring AI Agents as Teammates](https://arxiv.org/abs/2611.02633)** — 240 tasks, 8 teamwork dimensions, 18 models. Frontier models cave under interpersonal pressure (best deal only 14% of conflicts).
+- **[SyncHeC](https://arxiv.org/abs/2611.02999) / [AnchorHEC](https://arxiv.org/abs/2611.02884)** — Calibration matters for real deployment, not just offline accuracy.
+- **[CUA-Master](https://arxiv.org/abs/2611.03126)**, **[WebHarbor](https://arxiv.org/abs/2611.03634)** — Computer-use agents; adjacent rather than embodied, but relevant to long-horizon agentic control.
+- **[On the Limits of Test-Time Compute for Self-Evaluation](https://arxiv.org/abs/2611.00350)** — Ranking-error bias/variance decomposition; Scorpio improves verification and tree search. Relevant to action selection and best-of-N over policy rollouts.
 
-## Dexterous Hands, Grasping & Tactile
+## 9. Interpretability & Analysis of Embodied Models
 
-**[Contact Imitation Interface: Transferring Dexterous Skills by Showing How Contact Unfolds](https://arxiv.org/abs/2610.41028)** — Contact-grounded demos with contact-alignment-first retargeting plus hierarchical contact-surface planner/controller; ≥50 pp final-stage gain across six hand-task pairs (LEAP, Wuji).
+- **[A Phenomenology of Neural Geometry in VLA Models](https://arxiv.org/abs/2610.20840)** — Concepts in VLA activations are multi-dimensional and constraint-shaped (wrist orientation = arc, distance = two orthogonal rulers). Actionable via geometry-aligned steering.
+- **[Editing the Goal: Per-Token SAE Steering in π0.5](https://arxiv.org/abs/2611.00602)** — Swapping SAE features of a single goal word redirects behavior (20/20 rollouts at layer 0); effect bounded by depth, stronger with camera tokens. Includes a simpler difference-in-means baseline.
+- **[From Concepts to Actual Causes](https://arxiv.org/abs/2611.00155)** — Position paper: MI decodes concepts but does not isolate the actual cause of an incident; formalizes fault isolation via actual causality.
+- **[Learning to Live (LIFE)](https://arxiv.org/abs/2611.00180)** — Streaming event gates + plastic memory + explore-distill-mount for turning experience into reusable tools; 24 h real robot video case study.
+- **[Neurosymbolic autonomy thesis](https://arxiv.org/abs/2611.00158)** — LIMP / REALM / PACTS: language grounding, editable 3D Gaussian scene with consequence prediction, and visuomotor skills with symbolic effect prediction.
+- **[Energy-Based Policy Orchestration](https://arxiv.org/abs/2611.02546)** — Chooses policy-goal pairs at runtime via learned feasibility energies; sim-to-real on humanoid loco-manipulation.
+- **[Back to the Future / DARE](https://arxiv.org/abs/2611.02073)** — see §4.
+- **[SPARK (Self-Correcting Embodied Memory)](https://arxiv.org/abs/2611.00344)** — Semantic critic + targeted revisits repair embodied RAG; 13–41% fewer stored objects, up to 2.7× EQA gain. Note: same acronym as the behavior-tree paper below, different work.
+- **[SPARK (Sequential Planning via Anchored Robotic Keypoints)](https://arxiv.org/abs/2606.30613)** — Behavior tree anchored to 3D observations; 75.1% LIBERO-PRO without task practice.
+- **[LOGIV](https://arxiv.org/abs/2610.40016)** — Graph-verified execution with causal local repair above VLA/WAM policies; +10.7/+15.3 pts on dual-arm benchmarks.
+- **[Behavior Graphs](https://arxiv.org/abs/2611.00405)** — Compresses rollouts into an interpretable directed graph; users preferred it to video (16/18) and it doubles as a progress predictor.
+- **[When Prediction Shapes the Future](https://arxiv.org/abs/2611.02511)** — Blue-sky agenda: predictions that trigger interventions produce "AI-shaped" data; argues for closed-loop provenance and sequence identification.
 
-**[HandMimicX: Learning Human-Like Dexterous Manipulation via an Object-Centric Policy from Egocentric Videos](https://arxiv.org/abs/2610.41336)** — Object-centric RL objective decouples skill from hand trajectory, with anatomical constraints; generalizes across spatial configurations in sim and real.
+## 10. Application Domains (Surgical, Agriculture, Field, Space)
 
-**[UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis](https://arxiv.org/abs/2607.28198)** — Single relational formulation for grasp, relocation, in-hand rotation and translation; one policy without skill IDs supports long-horizon chaining.
+- **Surgical:** **[Supervised Autonomous Bimanual Suction and Cauterization](https://arxiv.org/abs/2611.00237)** (82.9% coverage, ex vivo spleen); **[ArthroCut](https://arxiv.org/abs/2603.03957)** (86% on six resections, grammar-constrained decoding); **[Virtual Box cutaway AR](https://arxiv.org/abs/2611.02537)** (3D error 12.9 → 5.0 mm).
+- **Endoscopy/continuum:** **[SaddleSense](https://arxiv.org/abs/2611.00582)** (saddle-shaped bend-sensor modules; 3.1% tip RMSE); **[SurgicalTS](https://arxiv.org/abs/2611.02034)** (4D triangle splatting); **[MPRF](https://arxiv.org/abs/2610.31028)** (anticipating retreat in flexible endoscopy).
+- **Agriculture:** **[Beyond Synthesis Conditions (CNT growth)](https://arxiv.org/abs/2611.00739)** — observation-window analysis identifies mid-growth decision points, directly relevant to closed-loop autonomous synthesis.
+- **Field/space:** **[MISLAM](https://arxiv.org/abs/2611.03106)** (magnetic-inertial SLAM, GNSS-denied, 45.7–78% closure error reduction); **[CHERI separation system](https://arxiv.org/abs/2611.02872)** (design + vibration qualification); **[GROVER](https://arxiv.org/abs/2605.24311)** (terrain-adaptive grouser wheel; 25–37% lower slip in the field).
+- **Aerial:** **[Dual path following for aerial manipulator](https://arxiv.org/abs/2611.01442)** (QP with closed-form scalar reduction); **[Pneumatic bat wings](https://arxiv.org/abs/2611.00879)**; **[Fixed-wing RL interception](https://arxiv.org/abs/2610.37470)** (validated in real flight).
+- **Soft robotics co-design:** **[Towards end-to-end co-design for one-shot printable soft robots](https://arxiv.org/abs/2611.03216)** (differentiable MPM + FDM-monolithic fabrication, sim-to-physical match).
+- **Exoskeletons/human:** **[Recursive Self-Improvement of Exoskeleton Policies](https://arxiv.org/abs/2611.01581)** (LLM rewrites control code from user feedback; 29–35% muscle activation reduction, but poor adaptability — honest limitation).
 
-**[NDPP-Grasp: Non-Differentiable Physical Plausibility Constraint-Guided Task-Oriented Dexterous Grasp Generation](https://arxiv.org/abs/2606.02432)** — Injects physical-plausibility guidance into the denoising of a task-aligned grasp diffusion model, even for non-differentiable constraints.
+---
 
-**[TacClaw-Infinity: A Large-Scale Vision-Tactile-Language-Action Dataset for Dexterous Manipulation](https://arxiv.org/abs/2610.20320)** — 10,000+ hours, 1M episodes, 1B frames via a tactile UMI-style handheld; demonstrated cross-embodiment transfer to three robots without robot-specific demos.
+### Bottom line
 
-**[TacO: Benchmarking Tactile Sensors for Object Manipulation](https://arxiv.org/abs/2605.21976)** — Task-driven comparison of visual, acoustic, magnetic and resistive sensors; usefulness depends strongly on modality, material and task.
-
-**[FlowTouch: View-Invariant Visuo-Tactile Prediction](https://arxiv.org/abs/2603.08255)** — Predicts tactile images from object-local 3D mesh plus flow matching; bridges sim-to-real and transfers to new sensors; used for grasp-stability prediction.
-
-**[EquiContact: A Hierarchical SE(3) Vision-to-Force Equivariant Framework for Spatially Generalizable Contact-rich Tasks](https://arxiv.org/abs/2507.10961)** — Diff-EDF planner + compliant G-CompACT policy; near-perfect peg-in-hole success under spatial OOD without retraining.
-
-## Teleoperation, Imitation & Skill Transfer
-
-**[From Teleoperation to Long-Horizon Dexterity: Evaluating Visuomotor Skills and Offline Proxies for Dexterous Manipulation](https://arxiv.org/abs/2610.40828)** — 281 policies, ~1,700 real RJ45 insertion trials on a five-finger hand. Representation choices dominate (70–100 pp effects); offline metrics correlate with success only weakly and within single policy families.
-
-**[I3L: Iterative Interactive Imitation Learning for Whole-Body Mobile Manipulation](https://arxiv.org/abs/2610.17748)** — JoyLo+ interface with touch-triggered takeover + iterative retraining; +68.3 pp over base policies, ≥90% on every task.
-
-**[Decompose and Reorganize: Planning with Primitives and Visuomotor Policies Learned from Demonstrations](https://arxiv.org/abs/2607.25397)** — TAMP-gated composition of atomic visuomotor skills; 100 demos beats diffusion policies with 1,000 on DexMimicGen.
-
-**[SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](https://arxiv.org/abs/2610.38234)** — Policy from simulated demos only; grasp in 90% of 50 phantom presentations, retraction preserved at 78% handoff. Ablations localize the sim-to-real gap to the instrument mask (22%/12% without it).
-
-**[FOCUS: First-Order Control Using Optimal Transport Supervision for Imitation from Observations](https://arxiv.org/abs/2610.41540)** — Short-horizon differentiable actor-critic with OT-matched rollout windows; handles a 152-muscle humanoid.
-
-**[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](https://arxiv.org/abs/2610.25736)** — FERT retrieves successful segments using failure contexts; 93.3–99.2% on five real tasks, phone packaging 79.2%→98.3% with 96 robots.
-
-**[BioAgent: Self-Directed Skill Acquisition and Capability Growth for Long-Horizon Laboratory Protocols](https://arxiv.org/abs/2610.41383)** — Acquires 5 new skill types, reuses 17 unchanged; 66%/58% complete-task success on 20/31-step dual-arm protocols.
-
-**[Learning and Transferring Closed-Loop Robot Software](https://arxiv.org/abs/2609.19906)** — Coding agent archives validated closed-loop policy code; archived implementations lift new-task success 45.2%→57.0%.
-
-## Sim-to-Real, Benchmarks & Evaluation Integrity
-
-**[When the Simulator Fails, Not the Policy: Auditing Contact Artifacts in Simulated Robot Benchmarks](https://arxiv.org/abs/2610.41857)** — Traces spurious ejections in RoboTwin to a triangle-area threshold in collision detection; fixing one constant drops artifact episodes from 12/100 to 0 and raises five container tasks 89%→98%. Essential reading for anyone reporting sim success rates.
-
-**[MolmoSpaces-CommonSense: Evaluating Commonsense in Robotic Manipulation Policies](https://arxiv.org/abs/2610.41377)** — New clutter/occlusion/affordance benchmark; success drops >50 pp as distractors increase, wrong-object actions in 30% of cases.
-
-**[TacClaw-Infinity](https://arxiv.org/abs/2610.20320)** (see above) and **[Do Earth-Trained Humanoid Controllers Walk on the Moon? Gravity, Terrain, and Soil Transfer](https://arxiv.org/abs/2610.30080)** — Only gravity-randomized rough terrain with 3D RFT soil contact survives both Earth (>0.83) and lunar (>0.95) conditions.
-
-## Safety, Robustness & Control for Manipulation
-
-**[Confidence-Modulated Safety Filtering for End-to-End Policies](https://arxiv.org/abs/2610.40922)** — Policy confidence sets filter conservativeness at runtime; permissive inside the ODD, extra margin beyond it.
-
-**[Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models](https://arxiv.org/abs/2610.03498)** — SAE-identified patch feature suppressed only when a probe detects attack; continuous suppression degrades the policy.
-
-**[Joint-Health-Aware Reinforcement Learning for Robust Robot Control Under Actuator Degradation](https://arxiv.org/abs/2610.41348)** — Continuous per-joint health vector + HealthNet estimator; +15.2 pp manipulation success on ManiSkill Panda tasks.
-
-**[Specification-Aware Distribution Shaping for Robotics Foundation Models](https://arxiv.org/abs/2603.17969)** — Enforces Signal Temporal Logic constraints on a frozen foundation model via minimally modified action distributions.
-
-**[CalibSwitch: Observation-Driven Camera-LiDAR Extrinsic Recovery...](https://arxiv.org/abs/2610.41352)** and **[TRACE: Target-State Risk-Aligned Conditional Execution for Embodied Tracking](https://arxiv.org/abs/2610.41275)** — Notable but peripheral (perception calibration; embodied tracking safety gate).
-
-## Briefly Noted / Adjacent
-
-- Motion planning & multi-robot: [Contact-based optimization for a million robots](https://arxiv.org/abs/2610.41548), [analytical characterization for two robots](https://arxiv.org/abs/2610.41558), [CA-BRF](https://arxiv.org/abs/2610.41188), [CC-HGCBF](https://arxiv.org/abs/2610.41214), [D4orm denoising](https://arxiv.org/abs/2609.35651).
-- Humanoids & whole-body: [HIPC](https://arxiv.org/abs/2610.41334), [DiffWBC](https://arxiv.org/abs/2610.41354), [$\nabla$Mimic](https://arxiv.org/abs/2610.41654), [ROOF fall recovery](https://arxiv.org/abs/2610.42097), [Movens-Zero](https://arxiv.org/abs/2610.41877).
-- Infrastructure: [cuPIQP batched differentiable QP](https://arxiv.org/abs/2610.41021), [QuIK4/5 IK](https://arxiv.org/abs/2610.41752), [Panda ROS 2 stack](https://arxiv.org/abs/2608.19740).
-- Aerial/field robotics: [OpenFlyV2](https://arxiv.org/abs/2610.39287), [SAFARI](https://arxiv.org/abs/2610.41456), [WildOS](https://arxiv.org/abs/2602.19308), [Veloxity](https://arxiv.org/abs/2610.41053).
-- Surveys: [Embodied memory survey](https://arxiv.org/abs/2610.41688), [Long-term memory security in LLM agents](https://arxiv.org/abs/2604.16548).
-
-**Off-theme (skipped):** the majority of today's feed — LLM post-training, alignment/interpretability, RAG, federated learning, scientific ML for biology/materials, time-series foundation models, and general agent-harness papers with no embodied component.
+1. **Tactile sensing is having a strong week** — dense 3-axis hardware at low cost, plus multiple papers on *how* to inject touch into policies (predictive objectives, residual steering, action-conditioned tactile world models).
+2. **Memory is the dominant VLA theme.** Six papers (PREM, MOST, HeLM, 2AM, LIFE, SPARK) attack non-Markovian manipulation; the converged lesson is that *what* you store matters more than *how much*.
+3. **Evaluation methodology is being seriously questioned** — validation loss inverting policy rankings, latency interacting with viewpoint shift, model rankings failing to transfer across embodiments, and verifiers that over-reject.
+4. **Action-chunk caching and latency-aware serving** (Reflex, Leap-VLA, VLALagBench) is becoming a first-class systems problem for real-time manipulation.
+5. **Sim-to-real is shifting from domain randomization to explicit dynamics identification** (CUE) and digital-twin practice (CoEnv, RoboSnap).
