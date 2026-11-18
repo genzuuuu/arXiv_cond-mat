@@ -1,205 +1,150 @@
 ### Daily arXiv Condensed Matter Digest
-  - **Generated at** 2026-11-17T14:17:31.288040
-  - **arXiv update** 2026-11-17T05:00:00
+  - **Generated at** 2026-11-18T13:51:19.375786
+  - **arXiv update** 2026-11-18T05:00:00
   - **Demo** [Daily arXiv Condensed Matter Digest](https://genzuuuu.github.io/arXiv_cond-mat/)
   - **Source** [GitHub repo](https://github.com/genzuuuu/arXiv_cond-mat/)
 
-# Today's arXiv Condensed Matter Physics — Highlights
-
-## 1. Kitaev, Altermagnetism, and Unconventional Magnetism
-
-Several papers push the boundaries of magnetic order beyond conventional paradigms.
-
-**Mixed-sign Kitaev exchange.** First-principles work identifies monolayer CrI₂ as hosting both FM and AFM Kitaev couplings on inequivalent bonds due to Jahn-Teller distortion, with a machine-learned spin Hamiltonian reproducing the observed proper-screw geometry. [Mixed-Sign Kitaev Exchange in Jahn-Teller-Distorted CrI$_2$](https://arxiv.org/abs/2611.19799)
-
-**Surface altermagnetism.** ARPES on the Kondo insulator FeSb₂ reveals anisotropic splitting consistent with emergent surface altermagnetic order, while a symmetry analysis shows roughness-robust surface altermagnetism is confined to PT antiferromagnets. [Spectroscopic evidence for unconventional surface magnetism in the Kondo insulator FeSb$_2$](https://arxiv.org/abs/2611.19804) · [Roughness-robust surface altermagnetism in $PT$ antiferromagnets](https://arxiv.org/abs/2606.11128)
-
-**Full symmetry-class survey.** A generalized quantum geometric tensor framework (including a new "Zeeman spin quantum metric") maps field-induced spin responses across M-, S-, A-, and S/A-type altermagnets. [Quantum-Geometric Spin Magnetization and Spin Currents Across Altermagnetic Symmetry Classes](https://arxiv.org/abs/2604.28088)
-
-**Altermagnetism in twisted quasicrystals.** Twisting collinear magnetic honeycomb layers produces i-wave and l-wave altermagnetic phases with high-order spin polarization patterns. [Altermagnetism in moir\'e quasicrystals](https://arxiv.org/abs/2611.20952)
-
-**High-temperature 2D antiferromagnets.** A new bilayer oxyhalide family Sr₃Fe₂O₅X₂ shows G-type AFM order up to ~580 K, the highest reported for layered antiferromagnets. [Robust Antiferromagnetic Ordering above 500 K in a Family of Bilayer van der Waals Materials](https://arxiv.org/abs/2611.20133)
-
----
-
-## 2. Quantum Spin Liquids and Frustrated Magnets
-
-**Kagome spin liquid is gapless.** A transformer-based neural-network quantum state on up to 768 sites finds both the magnetic order parameter and triplet gap extrapolate to zero, supporting a U(1) Dirac spin liquid in the kagome Heisenberg antiferromagnet. [Gapless Nature of Spin Liquid in the $S=1/2$ Kagome Heisenberg Antiferromagnet with Neural-Network Quantum States](https://arxiv.org/abs/2611.18840)
-
-**Hyperkagome in garnets.** Almandine Fe₃Al₂Si₃O₁₂ is identified as a spin-2 hyperkagome antiferromagnet; DFT-derived exchange plus Monte Carlo yields T_N ≈ 9.8 K, matching specific heat, with a non-collinear state described by toroidal octupolar order. [Hyperkagome antiferromagnetism in the iron garnet Almandine Fe$_3$Al$_2$Si$_3$O$_{12}$](https://arxiv.org/abs/2611.21610)
-
-**Theoretical clarification.** A review argues that impurity-free frustrated magnets lacking order form "quantum singlet liquids" rather than true quantum spin liquids, with gapless behavior tied to half-integer spins per unit cell. [Why "quantum spin liquids" are quantum singlet liquids](https://arxiv.org/abs/2611.16428)
-
----
-
-## 3. Superconductivity: Materials and Mechanisms
-
-**Hydride superconductivity.** Th substitution stabilizes (La,Th)H₁₀ at ~1 Mbar with T_c = 232 K, while a single-gap s-wave fit is obtained in (La,Th)H₉ using record pulsed currents. [Stabilization of LaH$_{10}$ with Thorium: Superconductivity in (La,Th)H$_{10}$ up to 232 K near 1 Mbar](https://arxiv.org/abs/2611.20170)
-
-**Interface-confined superconductivity.** (Pb,Sn)Te/FeTe bilayers show ~12 K superconductivity largely independent of the topological phase transition and layer thickness, with superfluid stiffness confirming interface confinement. [Interface-Confined Superconductivity with Thickness-Independent Superfluid Stiffness in (Pb,Sn)Te/FeTe Bilayers](https://arxiv.org/abs/2607.17539)
-
-**Rigorous Eliashberg bounds.** An independent proof establishes the Kiessling-Altshuler-Yuzbashyan bound T_c < 0.1827(λ⟨ω²⟩)^{1/2} via a comparison principle, plus moment-based bounds and convexity results, with part of the core formalized in Lean 4. [Sharp bounds on the Eliashberg critical temperature](https://arxiv.org/abs/2611.20496)
-
-**Nickelate anomalous scaling.** Critical scaling analysis of La₂SmNi₂O₇₋δ fails both 2D and 3D Ullah-Dorsey collapse, and resistivity reveals two distinct dissipation regimes — interpreted in terms of an orbital-composite order parameter. [Failure of Mean-Field Critical Scaling and Two Distinct Dissipation Regimes in La$_2$SmNi$_2$O$_{7-\delta}$](https://arxiv.org/abs/2611.21536)
-
-**Interlayer vortices.** BdG calculations show interlayer (FFLO) vortices dominate the phase diagram of multilayer Ising superconductors in parallel fields, with BCS phase vanishing in the infinite-layer limit. [Phase diagram and lattice structure of interlayer vortices in multilayer Ising superconductors in parallel magnetic fields](https://arxiv.org/abs/2611.20469)
-
----
-
-## 4. Topology, Quantum Geometry, and Non-Hermitian Physics
-
-**Magnon quantum geometry measured.** The authors show the INS cross-section encodes spinor wavefunction geometry, allowing extraction of the quantum geometric tensor without microscopic spin models. [Measurement of Magnonic Quantum Geometry](https://arxiv.org/abs/2611.18897)
-
-**Giant Raman optical activity.** Ni₃TeO₆ shows ROA ~100× molecular benchmarks; finite-momentum Raman tensor calculations link it to phonon-driven band-geometry modulation. [Giant Raman Optical Activity in Chiral and Polar Ni$_3$TeO$_6$](https://arxiv.org/abs/2611.19983)
-
-**Symmetry-protected quantum metric isolation.** In the chiral limit of type-II semi-Dirac semimetals, PT/chiral symmetry suppresses Berry curvature channels and shift currents, leaving quantum-metric-dipole nonlinear Hall as the sole geometric response. [Symmetry-protected isolation of the quantum metric in chiral type-II semi-Dirac semimetals](https://arxiv.org/abs/2611.04996)
-
-**Non-Hermitian edge accretion.** Strongly coupled competing skin-effect channels can *amplify* a state on edge reflection, violating the usual spectral encirclement picture and distinct from critical NHSE scaling. [Non-Hermitian edge accretion](https://arxiv.org/abs/2611.20881)
-
-**Exceptional structure and Lifshitz criticality.** An exactly solvable non-Hermitian Kitaev chain exhibits an EP whose Jordan block grows quadratically with N, plus a quasi-Hermitian Lifshitz transition. [Exceptional structure and Lifshitz criticality in a non-Hermitian Kitaev chain](https://arxiv.org/abs/2611.20327)
-
-**Dynamical phase transitions and Loschmidt topology.** Edge modes in DQPTs are protected by the topology of the *non-Hermitian Loschmidt matrix*, not the Hamiltonians — with Z indices (classes A, BDI, AIII) and a Z₂ index (class D). [When the Boundary Changes the Bulk: Topological Edge Modes in Dynamical Quantum Phase Transitions](https://arxiv.org/abs/2611.19328)
-
----
-
-## 5. Moiré, Graphene, and 2D Electronic Systems
-
-**Pseudo-electric fields in multilayer graphene.** Strained rhombohedral channels within Bernal domains realize giant pseudoscalar potentials, producing ultra-flat bands, gaps, and protected topological boundary states — the first atomic-scale imaging of this effect. [Strain-Engineering Giant Pseudo-Electric Fields in Multilayer Graphene](https://arxiv.org/abs/2611.20323)
-
-**Moiré excitons in Chern ferromagnets.** Gutzwiller + BSE analysis of twisted bilayer MoTe₂ at ν_h = 1 identifies two valley-selectively coupled excitons, momentum-space reconstruction, and a giant quadratic Stark response. [Moir\'e Excitons in a Chern Ferromagnet](https://arxiv.org/abs/2611.21224)
-
-**Gate-engineered superlattices.** Bilayer graphene on a patterned graphite gate forms a reconfigurable triangular-hole superlattice, with miniband gaps and carrier inversion tunable via three gates — no twisting needed. [A tunable multi-gated platform for superlattice engineering in bilayer graphene](https://arxiv.org/abs/2611.20998)
-
-**Valley control via magnetic order.** WSe₂/CrPS₄ heterostructures show optical switching of valley symmetry breaking by toggling the CrPS₄ Néel vector in-plane/out-of-plane, with ~42% modulation of low-energy exciton decay. [On-demand valley control in a WSe2/CrPS4 heterostructure via optically programmed magnetic order](https://arxiv.org/abs/2611.18906)
-
----
-
-## 6. Thermal Transport and Thermoelectrics
-
-**Graphene thermal conductivity lower bound.** Suspended bilayer graphene with polymer residues shows length-independent κ ≈ 570 W/(m·K); simulations show ~0.01 ML amorphous carbon suffices to suppress ZA phonons, establishing an amorphous-scattering lower bound for realistic devices. [Lower Bound of Thermal Conductivity in Graphene](https://arxiv.org/abs/2611.18795)
-
-**Bipolar anomalous Nernst effect.** ML-assisted screening identifies 249 BANE candidate materials; Co₂TiGe experimentally shows polarity inversion near 225 K while anomalous Hall conductivity stays temperature-invariant — enabling volt-scale transverse thermopiles without metallic interconnects. [Flat-band driven bipolar anomalous Nernst effect towards volt-scale transverse thermoelectric conversion](https://arxiv.org/abs/2611.19039)
-
-**Hidden heat-current channels.** A two-level spectral theory shows hydrodynamic constitutive descriptions can break down via reorganization of heat-current channels (e.g., NaF at 17 K) without any qualitative change in temperature dynamics. [Hidden Heat-Current Transport Channels Behind Observable Temperature Dynamics](https://arxiv.org/abs/2611.19776)
-
-**Magnon–phonon transport toolkit.** MagBerry (Julia) handles magnon/phonon topology and transport in a unified bosonic BdG framework, including thermal Hall, spin/orbital Nernst, and nonlinear Berry-curvature-dipole contributions. [MagBerry: A Julia package for modeling magnon and phonon topology and transport](https://arxiv.org/abs/2611.18731)
-
----
-
-## 7. Computational Methods and Machine Learning
-
-**Unified MLIP framework.** IANN reimplements PaiNN, NequIP, MACE, Allegro, EquiformerV2/V3, and UMA behind one data object, trainer, and deployment route, with exact PBC forces/stresses and self-describing checkpoints; releases foundation models trained on 41.9M structures. [IANN: A Unified Framework for Equivariant InterAtomic Neural Networks with User-Friendly Implementation](https://arxiv.org/abs/2611.19793)
-
-**Billion-atom ML force fields on desk-side GPUs.** Cube-and-halo decomposition makes ALIGNN-FF exact and scalable to 2×10⁹ atoms across nine GB10 machines. [Scaling a Universal Graph Neural Network Force Field to Billions of Atoms on Desk-Side GPUs](https://arxiv.org/abs/2611.20585)
-
-**Memory-efficient DMRG/TDVP.** Checkpointing environment tensors (k ≈ √N) cuts environment memory 4.6–10× with 6–15% time overhead, implemented in ITensorMPS.jl, TeNPy, MPSKit.jl, and quimb. [Exact environment checkpointing for memory-limited DMRG and TDVP](https://arxiv.org/abs/2611.19801)
-
-**Hybrid Clifford–tensor-network ground states.** Optimizing Clifford transformations by energy (not just entanglement distillation) yields up to 40× bond-dimension reduction for 2D systems in standard DMRG codes. [Flexible ground-state search algorithm on hybrid Clifford-tensor network manifolds](https://arxiv.org/abs/2611.18848)
-
-**GW self-energy learned.** A phase-aware transformer predicts the full k-resolved complex self-energy matrix (29 meV MAE on 1745 2D materials in COHSEX; 60 meV with plasmon-pole). [Machine Learning the $GW$ Self-Energy Operator for Real Materials](https://arxiv.org/abs/2611.20247)
-
-**DFT convergence pitfalls.** A variational descent probe and frozen-orbital Janak test expose "false self-consistency"; 16.8% of 339 converged Materials Project calculations show energy descent above threshold, including UO₂, CoO, FeO. [Detecting False Self-Consistency in Density-Functional Calculations](https://arxiv.org/abs/2611.20789)
-
-**Exact sampling for planar spin glasses.** Kac–Ward-based autoregressive sampling gives exact i.i.d. Boltzmann samples for planar Ising spin glasses at O(N^{5/2}) cost — a rigorous baseline for neural samplers. [Exact autoregressive sampling of planar Ising spin glasses via the Kac--Ward theory](https://arxiv.org/abs/2608.24382)
-
-**ML for experimental inverse design.** Power-law learning curves persist on non-ideal experimental data: 11,520 radiative-cooling coatings, with diffusion models proposing multiple fabricable solutions. [Scaling laws in machine learning on non-ideal experimental data enable inverse design of radiative-cooling coatings](https://arxiv.org/abs/2611.19596)
-
----
-
-## 8. Quantum Simulation and Quantum Information Approaches
-
-**Shadow-chain cooling.** A single randomized snapshot suffices, on average, to steer a state along imaginary-time cooling; trajectories sample an auxiliary-field path integral with fluctuations exponentially suppressed in system size, and cost scales with system size rather than inverse temperature. [Quantum Cooling by Classical Shadows](https://arxiv.org/abs/2611.18834)
-
-**Projected Pfaffians for PXP.** A compact O(N)-parameter projected Pfaffian ansatz reaches V-score ~10⁻⁹ for the 1D PXP ground state and <0.2% relative error on the square lattice. [Compact Projected Pfaffian States for Rydberg-Blockaded Quantum Spin Systems](https://arxiv.org/abs/2611.19790)
-
-**Fuzzy-sphere DMRG for conformal defects.** Multi-target DMRG on the fuzzy sphere (up to 49 orbitals) resolves the Z₂ twist line spectrum of the 3D Ising CFT, sharpening known defect primaries and identifying four higher-lying ones. [The $\mathbb{Z}_2$ twist line defect of the 3D Ising CFT on the fuzzy sphere from multi-target density matrix renormalization group](https://arxiv.org/abs/2611.19233)
-
-**Dynamical freezing in Rydberg arrays.** Experiments on up to 100 atoms observe dynamical freezing, identify interaction-induced heating channels, and show dual-parameter (detuning + Rabi) modulation broadens the frozen regime. [Harmonic Control of Dynamical Freezing in Programmable Rydberg Atom Arrays](https://arxiv.org/abs/2511.09633)
-
-**Kibble–Zurek anomaly.** Long 1D Rydberg chains reveal a defect-counting anomaly at long ramp times inconsistent with independent domain mergers, pointing to post-critical coarsening; prepare-and-hold shows no subsequent growth. [Observation of an anomaly in the statistics of Kibble-Zurek defects](https://arxiv.org/abs/2512.02112)
-
-**Noise-assisted thermalization.** ETH-based arguments and simulations show noise can accelerate Gibbs-state preparation (~3.5× in a non-integrable chain) and thermalize an otherwise non-thermalizing integrable model. [Noise-Induced Thermalization in Quantum Systems](https://arxiv.org/abs/2512.14842)
-
----
-
-## 9. Soft Matter, Active Matter, and Statistical Physics
-
-**Liquid–liquid criticality without demixing non-ideality.** A density-relaxed van der Waals closure shows liquid–liquid separation can occur even when the effective non-ideality favors mixing, once excluded-volume and attraction contributions are separated. [Liquid-liquid criticality in a fluid whose two structures favor mixing](https://arxiv.org/abs/2611.18737)
-
-**DNA topological droplets.** Supercoiled DNA forms plectonemes that act as force-insulated condensation pockets; droplet size is tunable by force and linking number, and magnetic-tweezer experiments with spermine confirm both force-dependent collapse and supercoiling-dependent condensation. [Tunable topological droplets on supercoiled DNA under tension](https://arxiv.org/abs/2611.19342)
-
-**Non-Markovian time crystals.** A post-Markovian master equation shows the Floquet spectrum splits into a Markovian part plus a contracted unitary replica, making DTC decay-rate insensitivity a direct witness of reservoir memory. [Experimentally relevant witness for non-Markovianity in discrete time crystals](https://arxiv.org/abs/2611.21332)
-
-**Glass transition length scales.** Modeling dielectric higher-order susceptibilities with RFOT + VFT reproduces growing correlation lengths/particle numbers across network, molecular, and polymeric glass formers, supporting a hidden phase transition most visible in fragile liquids. [Growing length scales while approaching the glass transition](https://arxiv.org/abs/2611.19883)
-
-**MIPS under local resetting.** Run-and-tumble particles with local stochastic resetting form a droplet-plus-gas steady state above a critical rate; droplet size is non-monotonic in resetting rate and invariant to resetting velocity. [Motility-Induced Phase Separation of Run-and-Tumble Particles under Local Stochastic Resetting](https://arxiv.org/abs/2610.26149)
-
-**Active elastic tissues.** Stress-feedback models of contractile fibers produce mechanical bistability, hysteresis, and orthogonal fiber domains separated by domain walls — a purely mechanical route to muscle-like patterning. [Spontaneous mechanical patterning in active elastic tissues with stress feedback](https://arxiv.org/abs/2611.14943) · [Feedback-induced mechanical bistability and perpendicular-domain formation in active elastic tissues](https://arxiv.org/abs/2611.14964)
-
-**Numerical evidence for dAT.** A robust spin-glass susceptibility definition shows susceptibility maxima bend left in the field–temperature plane for 3D Edwards–Anderson and mean-field models but right in 2D and pure 3D Ising, supporting replica symmetry breaking in 3D. [Evidence of the de Almeida-Thouless transition in three-dimensional spin glasses](https://arxiv.org/abs/2601.19192)
-
----
-
-## 10. Experimental Advances in Spectroscopy and Imaging
-
-**Off-edge XUV SHG.** Interface-selective XUV second harmonic generation is demonstrated well below linear absorption edges, with layer-resolved Bethe–Salpeter calculations assigning peaks to specific buried Si/SiO₂ interface monolayers. [Interface-Selective Extreme Ultraviolet Second Harmonic Generation Away from Linear Absorption Edges](https://arxiv.org/abs/2611.20198)
-
-**Information microscope for XPCS.** A learned representation tests whether chosen XPCS observables retain sufficient information about subsequent speckle dynamics, and an "XPCS Alphabet" searches for accessible observables that recover the missing information. [Predictive sufficiency as an information microscope for time-resolved coherent scattering](https://arxiv.org/abs/2611.18884)
-
-**Optical voltage profiling.** A proximal MoSe₂ exciton sensor converts local voltage into reflectance shifts, giving quantitative 2D voltage maps and revealing channel resistance and spatial heterogeneity in bilayer MoSe₂ despite MΩ-scale contacts. [Optical Voltage Profiling of 2D Semiconductors via Proximal Exciton Sensing](https://arxiv.org/abs/2608.18382)
-
-**Shocked diamond defect networks.** XFEL phase-contrast radiography plus MD shows compression forms interconnected amorphous bands and stacking faults on {111} variants, which then seed tensile cracks during release. [Emergence of Anisotropic Defect Networks in Shocked Diamond](https://arxiv.org/abs/2611.19045)
-
-**Continuous superradiant lasing.** A truly continuous superradiant laser on the ⁸⁸Sr narrow transition runs >8 hours with 320(40) Hz linewidth (>20× below natural), anchored to the atomic transition. [Continuous superradiant lasing on a narrow optical transition](https://arxiv.org/abs/2611.21386)
-
-**Field-effect magnon transistor.** A BiFeO₃-based device uses gate electric fields to reconfigure domain boundaries, switching nonlocal inverse-spin-Hall magnon signals between low and high states with nonreciprocal propagation. [Field-Effect Magnon Transistor](https://arxiv.org/abs/2611.19582)
-
----
-
-## 11. Phonons, Lattice Dynamics, and Electron–Phonon Coupling
-
-**Oxygen cages gate polaron hopping.** First-principles MD on Li_xMnPO₄ shows polaron hopping is decoupled from cation migration and instead gated by MnO₆ octahedral breathing (ΔV ≈ 2 Å³), yielding E_a = 0.20 ± 0.03 eV matching cage elasticity λ_V/4. [Oxygens breathe, electrons jump](https://arxiv.org/abs/2611.20260)
-
-**Anomalous band-gap temperature dependence.** TiNCl shows a nonmonotonic gap (minimum near 50 K), reproduced by a two-phonon Bose–Einstein model with thermal expansion negligible. [Anomalous temperature dependence of the band gap in TiNCl](https://arxiv.org/abs/2611.20499)
-
-**Spin–shear coupling in FePS₃.** THz spectroscopy finds two renormalization channels: frequency shifts confined below T_N, while linewidths and oscillator strengths track short-range correlations above T_N; a field-induced critical-slowing cusp appears near 3.2 T. [Two channels of magnetic renormalization in the terahertz lattice response of FePS$_{3}$](https://arxiv.org/abs/2611.20102)
-
-**Harmonic origin of PbTe local symmetry breaking.** ML potentials plus higher-order force constants show polar correlation lengths >50 Å arise from long-range harmonic (Coulomb underscreening) interactions; anharmonicity actually suppresses correlations. [Harmonic origin of local symmetry breaking in PbTe revealed using machine-learned potentials](https://arxiv.org/abs/2611.12598)
-
-**Defect lineshapes via phonon interpolation.** A method for Huang–Rhys spectral densities avoids large hypercell diagonalization and resolves acoustic and optical features in the NV⁻ center's photoluminescence. [First-principles calculation of electron-phonon spectral functions for defects using phonon interpolation](https://arxiv.org/abs/2607.20788)
-
----
-
-## 12. Quantum Chaos, Dynamics, and Information
-
-**Quasiparticle sectors and chaos.** In an XXZ ladder, crossover to GOE statistics shifts to weaker coupling with increasing size, while triplon-sector hybridization has weak size dependence — spectral chaos doesn't require full sector hybridization. [Quasi-particle sector hybridization and the onset of chaos in spin ladders](https://arxiv.org/abs/2611.19053)
-
-**Fragmentation in non-Hermitian systems.** Random imaginary gauge fields produce erratic skin localization; at finite filling this yields density fragmentation into Fermi domains whose number scales subextensively with L, emerging dynamically. [Fragmentation in Non-Hermitian Many-Body Systems](https://arxiv.org/abs/2611.19205)
-
-**Algebraic fragmentation construction.** SUSY/paraSUSY lifting generates exponentially many invariant sectors from arbitrary lattice Hamiltonians, with site-wise lifting preserving original dynamics in the active sector. [A Universal Algebraic Construction of Hilbert-Space Fragmentation](https://arxiv.org/abs/2611.19470)
-
-**Strong-to-weak SSB relaxation.** In a monitored Z₂ circuit mapping to nested bond percolation, autocorrelation exponents split into initial and observation scaling dimensions; the SW-SSB initial state realizes a configuration no pure state can. [Relaxation Critical Dynamics of Strong-to-Weak Spontaneous Symmetry Breaking](https://arxiv.org/abs/2611.20581)
-
-**Correlation functions from conserved charges.** Current minors (antisymmetrized products of charge densities and currents) have determinant expectation values, yielding factorized short-distance correlators valid in any nondegenerate eigenstate, including all Temperley–Lieb representations. [Calculating correlation functions in integrable spin chains from local conserved charges and currents](https://arxiv.org/abs/2611.20181)
-
-**Attention as Dyson equation.** A provocative argument: symmetric sum-pooling behaves like a Hartree mean field, while self-attention is a real-space Dyson iteration with a Boltzmann kernel acting as a two-body self-energy — motivating why pairwise attention captures correlated matter. [Self-attention is a Dyson equation for many-body machine learning](https://arxiv.org/abs/2611.21398)
-
----
-
-## 13. Materials Discovery and Data-Driven Approaches
-
-**Evidence-guided model composition.** SPARC evaluates competing model families via out-of-fold predictions and sparse posterior composition; improved R² on 6 of 8 datasets and reached 242 mV overpotential in an automated OER campaign. [SPARC: Evidence-guided adaptive model composition for materials discovery](https://arxiv.org/abs/2611.19050)
-
-**LLM literature screening.** 11 LLMs benchmarked on materials-science screening tasks; 7 exceed 0.90 balanced accuracy and the best reaches 0.96–0.98, with 10,000 records screened in ~4 minutes versus ~83 person-hours. [Automating literature screening and knowledge synthesis with large language models](https://arxiv.org/abs/2611.18588)
-
-**AI-native DFT engine.** Quantum 3xplorer, written by AI coding agents under scientist supervision, implements full plane-wave pseudopotential DFT (NC/USPP/PAW, +U, dispersion, forces/stress) and reproduces reference results, scaling on GPUs. [Quantum 3xplorer: AI-Native Engine for Next-Generation Quantum Materials Modeling](https://arxiv.org/abs/2610.42108)
-
-**Coherent interface energetics database.** 365 FCC/BCC/HCP coherent interfaces across 41 elements separate chemical and coherency-strain contributions; ordering systems tend negative, phase-separating positive, with no clear correlation to lattice mismatch. [Energetics of Coherent Heterophase Interfaces: Separating Chemical and Strain Contributions](https://arxiv.org/abs/2611.19693)
-
-**Palladate correlations.** Charge-self-consistent DFT+DMFT finds all five layered palladates metallic with dominant Pd-d_{x²−y²} character and weak-to-moderate orbital-dependent correlations; BaLaPdO₂Cl₂ is closest to a cuprate-like single-band picture. [Orbital-dependent electronic correlations and single-band character in layered palladates](https://arxiv.org/abs/2611.21138)
-
-**Coherent and incoherent interfaces in steels.** A DFT-trained cluster expansion plus lattice Monte Carlo quantifies Fe/CRP, Fe/MNSP, and Cu/MNSP interfacial energies, showing only Ni segregates to Fe/CRP boundaries and forms B2-like interfacial order. [Interplay of interfacial energetics and selective Ni segregation in the morphology of co-precipitates in low-alloy steels](https://arxiv.org/abs/2611.19060)
-
----
-
-**Cross-cutting themes today:** (i) altermagnetism is rapidly moving from symmetry classification to measurable surface/interface phenomena and device proposals; (ii) quantum geometry is becoming an experimental observable (magnons, Raman, nonlinear Hall); (iii) ML is shifting from surrogate fitting to exactness-preserving, physically structured tools (cube-and-halo, checkpointing, unified equivariant frameworks, AI-written DFT); and (iv) non-Hermitian and mixed-state topology is producing genuinely new dynamical phenomena rather than just re-labeled Hermitian results.
+# Condensed Matter Physics Preprint Highlights
+
+This batch spans exactly solvable plasma models, topological and altermagnetic matter, machine-learned interatomic potentials, moiré and correlated electron systems, and a large experimental/device cluster. Below grouped by theme.
+
+## Exactly Solvable Models, Conformal & Statistical Field Theory
+
+- Exact solution at Γ=2 of the 2D one-component plasma on a truncated Beltrami pseudosphere, with determinantal correlations, closed-form free energy and comparison to Monte Carlo up to N=4096: [Exact solution of the two-dimensional one-component plasma on the truncated Beltrami pseudosphere](https://arxiv.org/abs/2611.21652)
+- RG-based construction of critical fluctuation observables; correlation-matrix eigenstates show multiscale patterns and finite-size scaling, tested on the 2D Ising model: [Renormalization-Group Foundation of Critical Modes in Correlation Matrices](https://arxiv.org/abs/2611.21676)
+- New n^{1/4} term in the large-n expansion for a 2D Coulomb gas family with vanishing equilibrium density on an interior ring, plus a new bulk kernel at double scaling: [Critical phenomena in 2D Coulomb gas: Birth of a gap](https://arxiv.org/abs/2509.24529)
+- Exact matching-polynomial solution of the periodic non-Hermitian Baxter–Fendley Z_N clock chain, with spectral equations and a unique analytic continuation of the ground state: [Exact Matching-Polynomial Solution of the Periodic Baxter-Fendley $Z_N$ Clock Chain](https://arxiv.org/abs/2608.18633)
+- Convergence proof for cluster expansions of long-range Ising models (α>d) and algebraic decay with coefficient α: [Cluster Expansion and Decay of Correlations for Multidimensional Long-Range Ising Models](https://arxiv.org/abs/2508.15666)
+- Mechanism-dependent oxygen-capacity descriptors in perovskites: vacancy energy vs. anionic redox, with ICOHP as descriptor when oxygen holes dominate: [Mechanism-Dependent Descriptors for Oxygen Capacity in Perovskite Oxides](https://arxiv.org/abs/2607.29014)
+
+## Topological Order, Quantum Codes & Quantum Matter
+
+- Kitaev model on finite hyperbolic PBC clusters ({8,3}, {12,3}) via triangle-group quotients: ground-state superselection sectors set by quotient geometry, non-monotonic two-vison gap, algebraic matter correlations: [The Kitaev model on finite hyperbolic PBC clusters](https://arxiv.org/abs/2611.21697)
+- Pedagogical review of SymTFT unifying ordinary/generalized symmetries and classifying (1+1)d gapped and gapless phases: [The SymTFT and Quantum Phases of Matter](https://arxiv.org/abs/2611.21715)
+- Review generalizing Luttinger/parton-gauge arguments to FL* Fermi volumes, linking the quantized shift to spin-liquid symmetry fractionalization: [Constraints on the volume enclosed by Fermi surfaces](https://arxiv.org/abs/2611.21720)
+- Operator version of the Li–Haldane conjecture for chiral gapped states; corner entanglement gives a universal obstruction to gapped boundaries: [Chiral gapped states are universally non-topological](https://arxiv.org/abs/2510.23720)
+- Strong ETH proven for all Floquet eigenstates of Singer-cycle Clifford circuits (maximal-order symplectic matrices over F₂), with uniform bounds: [Strong eigenstate thermalization in Singer-cycle Clifford circuits](https://arxiv.org/abs/2611.22391)
+- Floquet anyon proliferation in the toric code yields a non-equilibrium analogue of mixed-state topological order, with new entropy/negativity decompositions: [Non-equilibrium topological order from Floquet anyon proliferation in the toric code](https://arxiv.org/abs/2611.23132)
+- Non-invertible QCAs as a microscopic, operator-algebraic definition of non-invertible symmetries; conjectured equivalence to dualizable topological defects: [Non-Invertible Quantum Cellular Automata I: Microscopic Definition of Non-Invertible Symmetries](https://arxiv.org/abs/2611.22928)
+- Passive 3D quantum memory stable against thermal noise and weak perturbations at zero temperature (multiscale local TQO): [Robust Passive Quantum Memory in Three Dimensions, Part I: Thermal and Zero-Temperature Perturbative Stability](https://arxiv.org/abs/2611.21749)
+- Associator defect quantifying non-unitarity of fusion categories, with quantitative physical tradeoffs for realizability (Yang–Lee example): [Associator Defects in Non-Unitary String-Nets](https://arxiv.org/abs/2601.06821)
+- Hole-density-resolved networks of time-reversal-breaking supercurrent loops imaged by dual neural networks in Bi₂Sr₂CaCu₂O₈: [Atomic-scale Imaging of Time Reversal Breaking Supercurrents in $\mathrm{Bi_2Sr_2CaCu_2O_8}$](https://arxiv.org/abs/2611.23060)
+
+## Altermagnetism, Magnetism & Spintronics
+
+- Octupolar magneto-optical effects from spatial dispersion, free of spin-orbit coupling requirements, covering d-wave (RuO₂, KV₂Se₂O), g/i-wave (CrSb) and noncoplanar antiferromagnets: [Altermagnetism-induced magneto-optical effects](https://arxiv.org/abs/2611.22750)
+- Coherent 230 meV magnons near 60 km/s and chiral magnon splitting in metallic altermagnet CrSb, indicating near-decoupling of spin and charge: [Coherent high-velocity chiral magnons in the metallic altermagnet CrSb](https://arxiv.org/abs/2511.16086)
+- Symmetry selection rule for spin-polarized dc currents in collinear antiferromagnets (particle-hole + sublattice equivalence breaking), demonstrated by DMFT on the doped Hubbard model: [A Correlated Route to Antiferromagnetic Spintronics](https://arxiv.org/abs/2603.16552)
+- Sub-threshold internal cleavage from defect-trapped hydrogen; two-stage mechanochemical picture separating atomic decohesion from crack growth: [Defect-trapped hydrogen couples stress-triggered atomic decohesion with explosive crack growth](https://arxiv.org/abs/2606.03298)
+- Laser imprinting of fused ferromagnetic/antiferromagnetic skyrmions within picoseconds, with field-tunable threshold: [Ultrafast imprinting of fused ferromagnetic/antiferromagnetic skyrmions](https://arxiv.org/abs/2611.21915)
+- Electrical writing/reading of compensated order in triangular artificial spin ice via orientation-dependent SOT plus planar Hall readout: [Electrical addressing of compensated magnetic order in artificial spin ice](https://arxiv.org/abs/2611.22912)
+- CaVO artificial spin ice as a geometrically tunable tricritical bridge from square- to kagome-like behavior, with an octagon-toroidal Blume–Capel description: [Artificial spin ice on the CaVO lattice: a tricritical bridge from square to kagome](https://arxiv.org/abs/2611.01397)
+- Canonical spin-glass freezing at ~45.5 K with memory effects in (Fe,Ni)₃GaTe₂: [Canonical spin glass behavior and memory effects in van der Waals magnet (Fe0.55Ni0.45)3GaTe2](https://arxiv.org/abs/2611.22781)
+- Antisite disorder converts the predicted high-T_C spin-gapless semiconductor NiMnCrAl into a spin glass: [From a High-T$\rm_C$ Spin-Gapless Semiconductor to a Spin-Glass: The Role of Disorder in NiMnCrAl](https://arxiv.org/abs/2611.22784)
+- Crystal-field-selected, predominantly octupolar order in wolframites MgReO₄/ZnReO₄ from µSR plus ab initio effective Hamiltonian: [Evidence for crystal-field-selected octupolar order in wolframite oxides](https://arxiv.org/abs/2503.18694)
+- Evidence against a quantum spin liquid near the UUD–FM critical field in BaCo₂(AsO₄)₂; bound spin-flip pairs account for the broad excitations and spin Seebeck sign: [Field-induced first order transitions and phase coexistence in the Kitaev quantum spin liquid candidate BaCo2(AsO4)2](https://arxiv.org/abs/2607.15346)
+- Neutron evidence that the "hidden" charge order in Sr₃Fe₂O₇ carries a genuine structural component: [Structural Response to the Hidden Charge Order in Sr$_3$Fe$_2$O$_7$](https://arxiv.org/abs/2611.22864)
+- Atomic-scale engineering of (LaVO₃)m/(PrVO₃)n superlattices: layer-resolved antipolar displacements and a tunable single antiferromagnetic T_N: [Engineering antiferromagnetic (LaVO3)m/(PrVO3)n superlattices](https://arxiv.org/abs/2611.22861)
+
+## Moiré, Flat Bands & Strongly Correlated Electrons
+
+- NQS phase diagram at ν_B=1 with three electrons per moiré cell: an extended regime of topological molecular charge order bridging Wigner molecular crystals and Chern insulators, plus a doublon Ising degree of freedom: [Tunable Topological Charge Order in Magnetic Moir\'e Systems](https://arxiv.org/abs/2611.21745)
+- Hartree–Fock predictions for an antiferro-orbital ferromagnetic insulator at quarter filling in twisted Γ-valley square-lattice Hubbard models: [Moir\'e Engineering of Square-Lattice Hubbard Models for Copper- and Iron-Based Superconductors](https://arxiv.org/abs/2603.11153)
+- FQAH states in gapless flat bands with singular, divergent quantum geometry; stability tied to spontaneous inhomogeneous carrier distributions rather than singularity strength: [Fractional quantization in gapless flat bands with ill-defined topology and divergent quantum geometry](https://arxiv.org/abs/2512.15041)
+- Patch RG near the inner VHS: purely repulsive interactions flow to an effective attraction, giving CDW near the VHS and PDW away from it — a possible origin of SC1/SC2 separation: [Emergent Attraction and Competing Orders near the Van Hove Singularity in Rhombohedral $n$-layer Graphene](https://arxiv.org/abs/2611.23232)
+- iPEPS study finding a dimerized color-ordered phase persisting across a wide anisotropy range in the SU(4) cubic-lattice Heisenberg model: [Dimerization in the SU(4) Heisenberg model on the cubic lattice: iPEPS study](https://arxiv.org/abs/2510.00284)
+- Unified phase diagram of the Z_N quantum torus chain: coexisting X/Z orders and three dipolar Luttinger liquids linked by noninvertible dualities: [Coexisting orders and dipolar Luttinger liquids in $\mathbb{Z}_N$ quantum torus chain](https://arxiv.org/abs/2611.22046)
+- Field-induced spectral softening and damping crossover in 2D quantum magnets; frequencies and damping collapse under coordination-weighted rescaling across four Rydberg lattices: [Observation of far-from-equilibrium scaling in the transient dynamics of 2D quantum magnets](https://arxiv.org/abs/2608.07211)
+- Interference-caged many-body scars, with local ETH-violation witnesses and deformation-stability arguments (spin-1 XY chain, square-lattice dimer model): [Interference-caged quantum many-body scars: Local ETH-violation witnesses and deformation stability](https://arxiv.org/abs/2504.07780)
+- Proof of low-temperature antiferromagnetic long-range order in a 3D lattice fermion model with Weyl-type hopping, via reflection positivity: [Antiferromagnetic Long-Range Order in a Lattice Fermion Model](https://arxiv.org/abs/2508.12421)
+
+## Superconductivity & Pairing
+
+- Hidden convexity of the Eliashberg condensation energy gives existence/uniqueness/continuity of the superconducting minimizer up to gauge, proving the thermodynamic conjectures for power-law, Einstein-phonon and general phonon interactions: [Hidden convexity of the Eliashberg condensation energy: existence, uniqueness and continuity of the superconducting state](https://arxiv.org/abs/2611.21773)
+- Phonon-mediated spinless chiral p-wave pairing on Weyl Fermi arcs, with Majorana vortices and a nonlocal-coupling-induced gap suppression at arc centers: [Phonon-mediated intrinsic topological superconductivity in Fermi arcs](https://arxiv.org/abs/2506.03250)
+- Energy comparison across invariant sectors showing the ground state at fixed average particle number always lies in the BCS paired subspace: [From the Full Fermionic Hilbert Space to the BCS Paired Subspace](https://arxiv.org/abs/2611.22493)
+- Preformed-exciton pseudogap regime in 1T′-MoTe₂: density-wave order and a lattice-pinned phason vanish at ~80 K while the single-particle gap survives to ~100 K: [Preformed excitons in the excitonic density-wave state of monolayer 1$T'$-MoTe$_2$](https://arxiv.org/abs/2611.22536)
+- BSE with Koopmans-compliant quasiparticle energies (BSE@qKI) as a GW-free workflow, with 4% mean error on first exciton energies and application to CrI₃: [Koopmans spectral functionals for excitons in materials](https://arxiv.org/abs/2611.22524)
+- Exact dynamic scaling of quantum jump counts in monitored free fermions (diffusive time, anomalous super-Poissonian size scaling), shown to extend to interacting fermions at large measurement strength: [Exact Dynamic Scaling of Quantum Jump Statistics in Monitored Many-Body Systems](https://arxiv.org/abs/2611.22029)
+- Adiabatic preparation of a bosonic FQH fluid by coherent pumping from a BEC, avoiding fixed-particle-number transitions via an anharmonic trap: [Adiabatic preparation of a fractional quantum Hall fluid by coherently pumping atoms from a Bose-Einstein condensate](https://arxiv.org/abs/2606.15951)
+
+## Quantum Dynamics, Transport & Non-Hermitian Systems
+
+- Competing localization channels in a non-Hermitian Ganeshan–Pixley–Das Sarma extension: exact Lyapunov exponents via Avila theory and a selection rule separating physical from suppressed mobility edges: [Complex mobility edges from competing localization channels in non-Hermitian quasicrystals](https://arxiv.org/abs/2611.22336)
+- Textbook-style perturbation theory for the intrinsic nonlinear Hall conductivity, compared with wavepacket formulations: [Intrinsic second-order nonlinear Hall effect from perturbation theory](https://arxiv.org/abs/2611.22229)
+- Fidelity susceptibility in the 3D Anderson model shows two peaks — a chaos crossover and the localization transition — with maximal vs. submaximal divergence tied to critical fractality: [Sensitivity to perturbations in the three-dimensional Anderson model](https://arxiv.org/abs/2605.25594)
+- Non-Hermitian disorder in 2D quantum percolation gives a size-drifting crossover and a multifractal window that widens with loss strength, accessible in photonic lattices: [Enhanced Multifractality Induced by Non-Hermitian Disorder in Quantum Percolation](https://arxiv.org/abs/2609.04625)
+- Local interference algorithms showing polynomial-cost classical approximation of OTOCs and charge correlators in random circuits, with errors mapped to replica partition functions: [Local interference algorithms for observables in large random circuits](https://arxiv.org/abs/2611.23207)
+- Area law for Rényi-0 entropy proven equivalent to finite-bond-dimension Gaussian fermionic TNS representations in 2D, with Wannier-orbital characterizations: [Expressivity of two-dimensional Gaussian fermion tensor network states](https://arxiv.org/abs/2611.23227)
+- Infrared-bounded logarithmic negativity vs. divergent mutual information in harmonic chains; collective canonical modes of the surviving entanglement identified: [Infrared fluctuations and collective entanglement modes in harmonic lattices](https://arxiv.org/abs/2611.21830)
+- Quantum speed limits as cheap geometric predictors of quantum Mpemba effects in dissipative qubits and open spin chains: [Predicting Quantum Mpemba Effects from Quantum Speed Limits](https://arxiv.org/abs/2611.22547)
+- Reverse-engineering fixed-text entropy-production claims: an exact antisymmetry supplies a well-defined zero, and the masked-model comparison is shown to vanish identically for a consistent evaluator: [Reversing the text is not reversing the path: a fixed-text measure without a zero, and an assembly-order comparison that vanishes identically](https://arxiv.org/abs/2611.23049)
+
+## Computational Methods & Machine Learning for Materials
+
+- ACE-based unification of MLIP architectures, with linear scaling of cost in system size and a Matbench Discovery accuracy/cost comparison: [Efficient Machine Learning Interatomic Potentials](https://arxiv.org/abs/2611.22444)
+- PARS: prior-guided selection of weakly supported local environments for first-principles labeling, then distillation (81% reduction in Ti vacancy-cluster energy error; 362,880-atom validation): [Prior-guided adaptive local refinement of foundation interatomic potentials](https://arxiv.org/abs/2611.22626)
+- quantEM: PyTorch/Zarr, differentiable-physics platform unifying ptychography, tomography, spectroscopy and strain mapping on CPU/GPU: [quantEM: Quantitative Electron Microscopy Analysis from Differentiable Physics to Neural Priors](https://arxiv.org/abs/2611.21903)
+- VQkit: unified VASP/Quantum ESPRESSO pre-/post-processing with cross-code conversion and property benchmarks: [VQkit: A Unified and Extensible Framework for VASP and Quantum ESPRESSO Pre- and Post-Processing](https://arxiv.org/abs/2611.22664)
+- Symmetry-reduced k-point sampling with nonorthogonal Gaussian bases in CP2K, including gauge-consistent Wannier90 export (64→4 points at 10⁻¹² hartree agreement): [Symmetry-reduced k-point sampling and Wannier analysis with localized Gaussian orbitals](https://arxiv.org/abs/2611.21801)
+- Parameter-free Voronoi-topology algorithm extracting exact Burgers vectors across 9,610 Materials Project structures and MD snapshots up to melting: [Burgers vectors from Voronoi topology](https://arxiv.org/abs/2611.22488)
+- Generalized NEB within constrained DFT coupling atomic, cell and magnetic degrees of freedom (bcc–hcp Fe, FeRh, CrI₃ spin reversal): [Combined magnetic and structural transition state in first-principles calculations](https://arxiv.org/abs/2611.22489)
+- Field-induced forces in the PAW method enabling field-driven structural relaxation; validated on AlX semiconductors and the AgNbO₃ antiferroelectric hysteresis loop: [Assessment of electric-field-induced forces for bulk solids within the projector-augmented wave method](https://arxiv.org/abs/2611.22400)
+- ODAC25: ~60M DFT points across ~15,000 MOFs for CO₂/H₂O/N₂/O₂ adsorption, with released MLIPs for direct-air-capture screening: [An open dataset of gas adsorption in deformable metal-organic frameworks for direct air capture](https://arxiv.org/abs/2508.03162)
+- LLM as a thermally informed zero-shot prior for solid-state synthesis (240 experiments, 0.72 pairwise accuracy; ranking tracks purity–temperature correlation): [What Do LLMs Use to Judge Synthesis Recipes? An Experimental Analysis on 240 Solid-State Syntheses](https://arxiv.org/abs/2611.22623)
+- MatOS agent operating system with reusable/evolving scientific assets; narrows 30M+ structures to 97 solid-electrolyte candidates: [MatOS: An Agent Operating System for Materials Research](https://arxiv.org/abs/2610.34203)
+- DSADiff: complexity- and imbalance-aware diffusion for crystal structure prediction (up to +9% match rate): [DSADiff: Data Structure-Aware Diffusion for Crystal Structure Prediction via Mitigating Complexity- and Imbalance-Induced Biases](https://arxiv.org/abs/2611.22050)
+- Weight-space programming: a general-purpose LLM writes network weights from task text, giving useful label-free priors (Spearman 0.64–0.79 on alloys; lower Bayesian-optimization regret): [Weight-Space Programming for Materials Science](https://arxiv.org/abs/2611.22013)
+- Synthetic crystal generation (perturb-and-relax, MatterGen, protostructure enumeration) with MLIP relaxation for diffusion pretraining: [Synthetic Crystal Data Generation for Diffusion Pretraining in Material Property Prediction](https://arxiv.org/abs/2611.22140)
+- GNNs augmented with mean-field/cavity heuristics for Ising ground states; still matched by simulated annealing at equal cost: [Graph neural networks and the energetic cavity method for combinatorial optimization](https://arxiv.org/abs/2609.07456)
+- Cluster-space Markov chain sampling replacing exhaustive enumeration in cluster expansions, giving an FPRAS and improved scaling for long-range quantum systems: [Efficient Quantum Monte Carlo through Cluster Expansions](https://arxiv.org/abs/2610.03893)
+- Compositional flow matching for multimodal X-ray/neutron reflectometry inversion, with late-fusion reuse of pretrained single-probe estimators: [Compositional neural networks for multimodal X-ray and neutron scattering inversion](https://arxiv.org/abs/2610.29362)
+- Closed-loop LLM + active-learning framework (LEAP) for perovskite precursor additives; best device reaches 21.32% PCE in a small prospective study: [A closed-loop framework for perovskite precursor additive discovery](https://arxiv.org/abs/2605.20242)
+- Mixtures of polyconvex input-convex neural potentials conditioned on material descriptors for parametric hyperelasticity: [Mixture of Polyconvex Neural Potentials for Parametric Hyperelasticity: Towards Foundation Material Models](https://arxiv.org/abs/2609.00359)
+- Steady-state NRG with reservoir-augmented Wilson chains (OC-FDM), reaching Kondo scales ~10⁻⁸ and agreeing with RT-QMC at far lower cost: [Open Wilson chain numerical renormalization group approach to steady-state non-equilibrium quantum transport](https://arxiv.org/abs/2606.14635)
+- W-SLDA Toolkit for time-dependent DFT/BdG simulations of ultracold Fermi gases across the BCS–BEC crossover, GPU-accelerated and reproducible: [W-SLDA Toolkit: A simulation platform for ultracold Fermi gases](https://arxiv.org/abs/2602.08982)
+- Generalized Schrieffer–Wolff transformation with a dual strong-coupling formulation, closed-form generator at every order and a geodesic gauge principle: [Generalized Schrieffer-Wolff transformation](https://arxiv.org/abs/2611.22014)
+- Sobolev-regularity unique continuation for the Pauli–Fierz Hamiltonian, yielding a positive-coupling Hohenberg–Kohn theorem: [Unique continuation for the Pauli-Fierz Hamiltonian](https://arxiv.org/abs/2611.23062)
+- Sobolev-class inverse problem for time-dependent DFT on the torus, refining earlier analytic-density results: [Sobolev theory for the inverse problem of time-dependent density functional theory on the torus](https://arxiv.org/abs/2611.22942)
+
+## Experiments: Spectroscopy, Devices & Materials Characterization
+
+- Angle-resolved multidimensional THz spectroscopy of the Josephson tunneling resonance in La₁.₈₃Sr₀.₁₇CuO₄: non-rephasing signal isolates order-parameter fluctuations, with a crossover at T_c: [Probing Phase Fluctuations in Cuprates by Multidimensional Josephson Spectroscopy](https://arxiv.org/abs/2611.21708)
+- Tripartite magnon–phonon–polariton optomechanics in suspended CrSBr, with attractive magnon–phonon coupling of −43 MHz and field-tuned resonance: [Magnon-Phonon-Polariton Optomechanics in a van der Waals Magnet](https://arxiv.org/abs/2611.21869)
+- Ultrabroadband THz probe of NiPS₃: ~109 fs carrier localization into self-trapped excitons with a cooperative two-phonon mechanism: [Charge-transfer excitation drives cooperative phonon-assisted exciton self-trapping in NiPS$_3$](https://arxiv.org/abs/2611.23131)
+- Giant Raman optical activity in Ni₃TeO₆ (100× molecular benchmarks), traced to phonon modulation of band geometry: [Giant Raman Optical Activity in Chiral and Polar Ni$_3$TeO$_6$](https://arxiv.org/abs/2611.19983)
+- Off-edge XUV SHG resolving buried Si/SiO₂ and oxide interfaces without core-level resonances, assigned by layer-resolved first-principles calculations: [Interface-Selective Extreme Ultraviolet Second Harmonic Generation Away from Linear Absorption Edges](https://arxiv.org/abs/2611.20198)
+- NbN nanopatterning down to 70 nm pitch with vortex-pinning signatures in transport and reduced superfluid density by cryogenic THz spectroscopy: [High-resolution top-down nanopatterning of NbN thin films for superconducting metamaterials](https://arxiv.org/abs/2611.21848)
+- Nitride-encapsulated MoSe₂ shows attractive/repulsive Fermi polarons (~31 meV splitting) at (0.8–0.9)×10¹² cm⁻², reproduced by finite-temperature polaron theory to ~80 K: [Optical characterization of Fermi polarons in monolayer MoSe$_2$ encapsulated in amorphous silicon nitride](https://arxiv.org/abs/2611.21931)
+- Reconfigurable MoSe₂–WSe₂ lateral heterojunction unifying photodetection (35 A/W), spatially programmable electroluminescence and CMOS logic: [Reconfigurable 2D Lateral Heterostructure Platform for Unified Detection, Emission, and Logic](https://arxiv.org/abs/2611.22170)
+- Solvent/antisolvent etching of layered halide perovskite microcrystals along [Cyclic Boson Stars with Quantum Vortex Molecules](https://arxiv.org/abs/2611.21734)/[High-resolution top-down nanopatterning of NbN thin films for superconducting metamaterials](https://arxiv.org/abs/2611.21848), enabling endo-epitaxial heterostructures: [Solvent/Antisolvent-Driven Etching of 2D Layered Halide Perovskite Microcrystals toward Endo-Epitaxial Heterostructures](https://arxiv.org/abs/2611.22529)
+- Self-consistent Poisson–Fermi analysis of BDD/N-doped diamond junctions: interface grading and donor concentration, not bulk BDD response, set NV⁻ depletion: [Electrostatic screening and nitrogen-vacancy charge states in boron-doped/nitrogen-doped diamond junctions](https://arxiv.org/abs/2611.22074)
+- Second-harmonic flexoelectricity: an intrinsic quadratic contribution persists to strain gradients of ~1 m⁻¹, so ferroelectric bending generates voltage at twice the drive frequency: [Second Harmonic Flexoelectricity](https://arxiv.org/abs/2611.22088)
+- SHI track morphology in rutile (hourglass) vs. anatase (cylindrical) TiO₂, with electron-beam recrystallization affecting TEM interpretation: [Swift Heavy Ion Tracks in Polymorphs of Titanium Dioxide: The Effects of Electron Beam and Crystal Structures](https://arxiv.org/abs/2611.22153)
+- Substrate-dependent polaron species, density and stability (up to 300 K) in single-layer MnBr₂ on graphene/Ir and Au(111): [Substrate Role in Polaron Formation on Single-layer Transition Metal Dihalides](https://arxiv.org/abs/2612.21163)
+- ddPDF analysis showing ligand alignment and NC lattice periodicity dominating the oscillatory surface signal for Sn₂S₆⁴⁻ on PbS nanocrystals: [Pair distribution function oscillations at electrostatically stabilized nanocrystal surfaces reflect nanocrystal lattice periodicity](https://arxiv.org/abs/2611.22946)
+- TDTR plus picosecond ultrasonics on Cu/dielectric hybrid-bonding stacks, with depth-resolved thermal conductivity and bonding-interface acoustic signatures: [Thermal and Acoustic Measurements of Hybrid Bonding Stacks](https://arxiv.org/abs/2611.22694)
+- Ni intercalation ordering sequence in Ni_xNbS₂ (disorder → 2×2 → √3×√3 → stripe), with chiral stacking faults and a DFT-reproduced c-axis minimum: [Ni ordering in the van der Waals gap of Ni-intercalated 2H-NbS$_2$: from disorder through $2\times2$ and $\sqrt{3}\times\sqrt{3}$ order to stripe order](https://arxiv.org/abs/2611.05699)
+- Boron segregation at internal nitride–matrix interfaces suppresses grain-boundary nitride growth in Ni/Co superalloys: [Suppression of Grain Boundary Nitrogen Degradation by Boron in Superalloys](https://arxiv.org/abs/2611.30451)
+- Temperature-driven sign reversal of the hydrogen response in nanogranular Pd networks, with a cancellation point near leak-alarm setpoints: [Temperature Flips the Sign of the Hydrogen Response in Nanogranular Palladium Networks](https://arxiv.org/abs/2611.22877)
+
+## Fluids, Soft Matter & Active Systems
+
+- Odd active crystal in a magnetic field: field-tunable long-wavelength instability at k=0 plus exceptional points at finite k: [Magnetic tuning of odd elastic instabilities in chiral active crystals](https://arxiv.org/abs/2611.21876)
+- Active nematics on a sphere: compressible active traction drives pairwise fusion of four +1/2 defects into two antipodal +1 defects, spontaneously defining an axis: [Spontaneous axis formation through defect fusion in active nematics](https://arxiv.org/abs/2611.23107)
+- Quasiconformal geometry for anisotropic liquid crystals: the Beltrami coefficient is fixed by elastic constants, giving a geometric language beyond conformal defect constructions: [Quasiconformal geometry and elastic anisotropy in liquid crystals](https://arxiv.org/abs/2611.22978)
+- Tangentially driven polymers: activity broadens the coil–globule crossover without shifting the Θ point; a blob-ratio scaling variable collapses expansion factors: [Interplay of Activity and Attraction in the Coil-to-Globule Transition of Tangentially Driven Polymers](https://arxiv.org/abs/2610.27787)
+- Fluctuation theorems supply a zero to a fixed-text entropy-production measure via an exact reversal antisymmetry; non-zero masked-model readings diagnose the evaluator, not the text: [Reversing the text is not reversing the path: a fixed-text measure without a zero, and an assembly-order comparison that vanishes identically](https://arxiv.org/abs/2611.23049)
+- Indentation of pre-tensioned cortex-like fibre networks: force depends on whether weakening lies under the probe (8–12× reduction) or beside it (~15%), with a two-term F∝aδ+bδ^{3/2} fit: [Indentation of pre-tensioned cortex-like fibre networks: tension, local stretching and the signature of defect architecture](https://arxiv.org/abs/2611.23002)
+- Polymer adsorption on vicinal surfaces: a step-attached phase meeting desorbed and terrace-adsorbed phases at a multicritical point for wide terraces: [Polymer adsorption on vicinal surfaces](https://arxiv.org/abs/2611.22966)
+- Variational, continuous adsorption theory yielding Langmuir-like σ~n₀ scaling at low density and saturation at high density: [A Variational Description of the Adsorption Phenomenon](https://arxiv.org/abs/2611.22642)
+- Confinement reshapes subrecoil laser cooling: rare long trapping events are geometrically restricted, producing two crossovers and an optimal exponent α=4: [Confinement Alters Energy Relaxation in Subrecoil Laser Cooling](https://arxiv.org/abs/2611.22436)
+- Universal collapse of brine-inclusion migration data in ice across solutes, gradients and concentrations, consistent with solute-diffusion-limited motion: [Universal scaling of brine migration in ice](https://arxiv.org/abs/2611.22765)
+- Adaptive resetting bypasses the diffusive entropy-production speed limit for state-to-state transitions, with a derived diffusion–reset speed limit: [Bypassing the Entropy Production Speed Limit of State-to-State Transitions with Adaptive Resetting](https://arxiv.org/abs/2611.22712)
+- Exact path-extrema upper bound on mean entropy production, decomposing allocation and curvature gaps; requires only the terminal fluctuation relation, not martingality: [Path-Extrema Upper Bounds on Mean Entropy Production](https://arxiv.org/abs/2605.17074)
+- Memory kernel for intermittent forcing: long-lag coefficients become a superposition of frozen-flow kernels weighted by ξ²p(ξ), with an exact stationary mean for 2<μ<3: [Memory kernel and closure for systems driven by intermittent forcing with power-law waiting times](https://arxiv.org/abs/2611.23092)
+- Closed-loop framework bridging ecology and population genetics: emergent negative frequency-dependent selection suppressible to a single ecological-feedback parameter: [Emergent frequency-dependent selection predicts mutation outcomes in complex ecological communities](https://arxiv.org/abs/2509.23977)
+- Quantum jump statistics in monitored systems: exact diffusive time scaling and anomalous super-Poissonian size dependence, with a postselection-free route to measurement-induced universality: [Exact Dynamic Scaling of Quantum Jump Statistics in Monitored Many-Body Systems](https://arxiv.org/abs/2611.22029)
+- Variational quantum deflation on a four-mode Fock-state photonic circuit for He ground and excited states in CAS(2,2), preserving orthogonality: [Helium States Inspired by Quantum Photonics Circuit](https://arxiv.org/abs/2611.06448)
+
+Within this set, the theoretical core is a cluster of exactly solvable and rigorously analyzed models (pseudosphere plasma, hyperbolic Kitaev clusters, Baxter–Fendley chains, Eliashberg convexity), while the computational core is dominated by MLIP efficiency and adaptation plus generative/LLM-assisted materials discovery. Experimentally, the strongest signals are in cuprate phase fluctuations, altermagnetic magnons and magneto-optics, correlated-oxide excitations, and nanofabricated superconducting metasurfaces.
